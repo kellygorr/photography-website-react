@@ -1,5 +1,5 @@
 {
-	"name": "my-typescript-app",
+	"name": "gallery-website-react",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -39,6 +39,7 @@
 		]
 	},
 	"devDependencies": {
+		"babel-plugin-macros": "^2.6.1",
 		"eslint-plugin-prettier": "^3.1.1",
 		"prettier": "1.18.2"
 	}
