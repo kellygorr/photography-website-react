@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { ISlideshow } from './data/IProject'
 
 interface IPageProps {

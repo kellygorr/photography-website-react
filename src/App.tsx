@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Home, Contact, Navigation, Page } from './components'
 import { projects } from './components/data'
 import { GlobalStyles } from './GlobalStyles'
