@@ -33,22 +33,15 @@ export enum FileType {
 export interface IProject {
 	title: string
 	subtitle: string
-	thumbnail: string
-	content: ISection[]
+	photos: IPhotos[]
 	tags?: TagType[]
 }
 
-export interface ISection {
-	header?: string
-	slideshow?: ISlideshow[]
-	body?: string
-	attachments?: IAttachment[]
-}
-
-export interface ISlideshow {
+export interface IPhotos {
+	title?: string
+	thumbnail: string
 	img: string
 	caption?: string
-	source?: string
 }
 
 export interface IAttachment {

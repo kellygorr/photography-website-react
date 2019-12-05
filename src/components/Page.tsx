@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components/macro'
-import { IProject, ISection } from './data/IProject'
-import { Section } from './Section'
+import { IProject } from './data/IProject'
+import { Slideshow } from './shared/Slideshow'
 
 interface IPageProps {
 	data: IProject | null
@@ -13,10 +13,7 @@ export const Page: React.FC<IPageProps> = (props: IPageProps) => {
 	}
 	return (
 		<Container>
-			{props.data.content.map((data: ISection) => {
-				let items = Object.entries(data)
-				return items.map((item, index) => <Section key={index} type={item[0]} data={item[1]} />)
-			})}
+			<Slideshow data={props.data.photos} />
 		</Container>
 	)
 }
@@ -24,4 +21,5 @@ export const Page: React.FC<IPageProps> = (props: IPageProps) => {
 const Container = styled.div`
 	height: 100%;
 	width: 100%;
+	display: flex;
 `

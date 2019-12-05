@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components/macro'
-import { ISlideshow } from './data/IProject'
+import { IPhotos } from '../data/IProject'
 
 interface IPageProps {
-	data: ISlideshow[]
+	data: IPhotos[]
 }
 
 export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
@@ -13,7 +13,7 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 	return (
 		<Container>
 			<Slides>
-				{props.data.map((slide: ISlideshow) => (
+				{props.data.map((slide: IPhotos) => (
 					<Slide>
 						<img src={slide.img} alt={slide.img} />
 						{slide.caption && <Caption>{slide.caption}</Caption>}
@@ -28,7 +28,6 @@ const Container = styled.div`
 	width: 100%;
 	height: 500px;
 	max-height: 500px;
-	background-color: gray;
 	overflow: hidden;
 `
 const Slides = styled.div`

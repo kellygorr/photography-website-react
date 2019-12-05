@@ -1,31 +1,37 @@
 import * as React from 'react'
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
-import { IProject } from './data/IProject'
+import { IPhotos } from './data/IProject'
 
 interface IThumbnailProps {
-	project: IProject
+	title: string
+	photo: IPhotos
 }
 
 export const Thumbnail: React.FC<IThumbnailProps> = (props: IThumbnailProps) => {
-	const { project } = props
+	const { photo, title } = props
 	return (
-		<ThumbnailContainer to={`page/${project.title.replace(' ', '').toLowerCase()}`}>
-			<ThumbnailStyled style={{ backgroundImage: `url('${project.thumbnail}')` }}>{<Button> </Button>}</ThumbnailStyled>
-			<Details>{project.title}</Details>
+		<ThumbnailContainer to={`page/${title.replace(' ', '').toLowerCase()}`}>
+			<ThumbnailStyled style={{ backgroundImage: `url('${photo.thumbnail}')` }}>{<Button> </Button>}</ThumbnailStyled>
+			<Details>{photo.title}</Details>
 		</ThumbnailContainer>
 	)
 }
 const ThumbnailContainer = styled(Link)`
 	display: flex;
 	flex-direction: column;
+	min-width: 200px;
+	width: 200px;
+	height: 150px;
 `
 
 const ThumbnailStyled = styled.div`
 	width: 100%;
-	height: 150px;
+	height: 100%;
 	background-size: cover;
 	background-position: center;
+	background-color: green;
+	border: 1px solid pink;
 `
 
 const Button = styled.div``

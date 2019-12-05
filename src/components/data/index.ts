@@ -38,4 +38,4 @@ import { test } from './projects/test'
 // 	jewelBoxCafe,
 // ]
 
-export const projects: IProject[] = [test]
+export const projects: IProject[] = [test, test, test, test, test]

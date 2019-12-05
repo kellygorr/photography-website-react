@@ -6,7 +6,7 @@ export const Navigation: React.FC = () => {
 	return (
 		<Container>
 			<Link to='/'>Test 1</Link>
-			<Link to='/contact'>Contact</Link>
+			<Link to='/about'>About</Link>
 		</Container>
 	)
 }

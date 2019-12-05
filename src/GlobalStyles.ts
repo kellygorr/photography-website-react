@@ -1,5 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
+export const AccentColor = '#181818'
+export const PrimaryColor = '#FFFFFF'
+export const PrimaryHoverColor = '#757575'
+export const PrimaryColorBg = '#303030'
+
 export const GlobalStyles = createGlobalStyle`
 	* {
         position: relative;
@@ -34,4 +39,5 @@ export const GlobalStyles = createGlobalStyle`
 		color: inherit;
 		text-decoration: inherit;
 	}
+
 `
