@@ -55,7 +55,7 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 			</Container>
 			<SlideFooter>
 				<SlideIndex>
-					{props.title} {isScrolling ? '_' : active + 1} of {props.data.length}
+					{props.title} {active + 1} of {props.data.length}
 				</SlideIndex>
 				<Directions>(Scroll to navigate)</Directions>
 			</SlideFooter>
@@ -112,6 +112,8 @@ const Slide = styled.div`
 
 	img {
 		width: 100%;
+		max-width: 1080px;
+		max-height: 1080px;
 	}
 `
 const SlideIndex = styled.div``

@@ -1,10 +1,8 @@
 import { IProject } from '../IProject'
-import { TagType } from '../IProject'
 
 export const test: IProject = {
 	title: 'Cats',
 	subtitle: 'subtitle',
-	tags: [TagType.Xbox],
 	photos: [
 		{
 			title: 'test1',

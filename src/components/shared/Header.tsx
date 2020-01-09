@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
 
 const Container = styled.div`
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: center;
 	position: relative;
 	width: 100%;
@@ -26,5 +26,5 @@ const Logo = styled.h1`
 	font-size: 2em;
 `
 const StyledLink = styled(Link)`
-	font-family: 'my_underwoodregular';
+	font-family: 'mohaveregular';
 `

@@ -35,7 +35,7 @@ const ThumbnailContainer = styled(Link)`
 	width: 60vw;
 	height: 50vw;
 	min-height: 100px;
-	margin-right: 20px;
+	margin-right: 10px;
 
 	@media (min-width: 450px) {
 		min-width: 43%;
