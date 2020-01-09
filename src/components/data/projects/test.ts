@@ -4,49 +4,42 @@ import { TagType } from '../IProject'
 export const test: IProject = {
 	title: 'Cats',
 	subtitle: 'subtitle',
-	tags: [TagType.XboxOne],
+	tags: [TagType.Xbox],
 	photos: [
 		{
 			title: 'test1',
-			thumbnail: '',
-			img:
-				'https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/p960x960/72201041_10109528823722778_7285494715728789504_o.jpg?_nc_cat=105&_nc_oc=AQlSgdPcmojtcTFF81p-pWoiDgP8rhcANRZ7U9o1LFvNHXN8_cV-Kz-YrfUHfrZCuc4&_nc_ht=scontent-sea1-1.xx&oh=81108a98b94d722076198ea9302c0d48&oe=5E58971D',
+			thumbnail: 'https://live.staticflickr.com/3555/3304908227_047151067e_b.jpg',
+			img: 'https://live.staticflickr.com/3555/3304908227_047151067e_b.jpg',
 		},
 		{
 			title: 'test2',
-			thumbnail: '',
-			img:
-				'https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/p960x960/72201041_10109528823722778_7285494715728789504_o.jpg?_nc_cat=105&_nc_oc=AQlSgdPcmojtcTFF81p-pWoiDgP8rhcANRZ7U9o1LFvNHXN8_cV-Kz-YrfUHfrZCuc4&_nc_ht=scontent-sea1-1.xx&oh=81108a98b94d722076198ea9302c0d48&oe=5E58971D',
+			thumbnail: 'https://www.thewowstyle.com/wp-content/uploads/2015/03/Desktop-Wallpaper-HD2.jpg',
+			img: 'https://www.thewowstyle.com/wp-content/uploads/2015/03/Desktop-Wallpaper-HD2.jpg',
 		},
 		{
 			title: 'test3',
-			thumbnail: '',
-			img:
-				'https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/p960x960/72201041_10109528823722778_7285494715728789504_o.jpg?_nc_cat=105&_nc_oc=AQlSgdPcmojtcTFF81p-pWoiDgP8rhcANRZ7U9o1LFvNHXN8_cV-Kz-YrfUHfrZCuc4&_nc_ht=scontent-sea1-1.xx&oh=81108a98b94d722076198ea9302c0d48&oe=5E58971D',
+			thumbnail: 'https://live.staticflickr.com/3555/3304908227_047151067e_b.jpg',
+			img: 'https://live.staticflickr.com/3555/3304908227_047151067e_b.jpg',
 		},
 		{
 			title: 'test4',
-			thumbnail: '',
-			img:
-				'https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/p960x960/72201041_10109528823722778_7285494715728789504_o.jpg?_nc_cat=105&_nc_oc=AQlSgdPcmojtcTFF81p-pWoiDgP8rhcANRZ7U9o1LFvNHXN8_cV-Kz-YrfUHfrZCuc4&_nc_ht=scontent-sea1-1.xx&oh=81108a98b94d722076198ea9302c0d48&oe=5E58971D',
+			thumbnail: 'https://www.thewowstyle.com/wp-content/uploads/2015/03/Desktop-Wallpaper-HD2.jpg',
+			img: 'https://www.thewowstyle.com/wp-content/uploads/2015/03/Desktop-Wallpaper-HD2.jpg',
 		},
 		{
 			title: 'test5',
-			thumbnail: '',
-			img:
-				'https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/p960x960/72201041_10109528823722778_7285494715728789504_o.jpg?_nc_cat=105&_nc_oc=AQlSgdPcmojtcTFF81p-pWoiDgP8rhcANRZ7U9o1LFvNHXN8_cV-Kz-YrfUHfrZCuc4&_nc_ht=scontent-sea1-1.xx&oh=81108a98b94d722076198ea9302c0d48&oe=5E58971D',
+			thumbnail: 'https://live.staticflickr.com/3555/3304908227_047151067e_b.jpg',
+			img: 'https://live.staticflickr.com/3555/3304908227_047151067e_b.jpg',
 		},
 		{
 			title: 'test6',
-			thumbnail: '',
-			img:
-				'https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/p960x960/72201041_10109528823722778_7285494715728789504_o.jpg?_nc_cat=105&_nc_oc=AQlSgdPcmojtcTFF81p-pWoiDgP8rhcANRZ7U9o1LFvNHXN8_cV-Kz-YrfUHfrZCuc4&_nc_ht=scontent-sea1-1.xx&oh=81108a98b94d722076198ea9302c0d48&oe=5E58971D',
+			thumbnail: 'https://www.thewowstyle.com/wp-content/uploads/2015/03/Desktop-Wallpaper-HD2.jpg',
+			img: 'https://www.thewowstyle.com/wp-content/uploads/2015/03/Desktop-Wallpaper-HD2.jpg',
 		},
 		{
 			title: 'test7',
-			thumbnail: '',
-			img:
-				'https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/p960x960/72201041_10109528823722778_7285494715728789504_o.jpg?_nc_cat=105&_nc_oc=AQlSgdPcmojtcTFF81p-pWoiDgP8rhcANRZ7U9o1LFvNHXN8_cV-Kz-YrfUHfrZCuc4&_nc_ht=scontent-sea1-1.xx&oh=81108a98b94d722076198ea9302c0d48&oe=5E58971D',
+			thumbnail: 'https://live.staticflickr.com/3555/3304908227_047151067e_b.jpg',
+			img: 'https://live.staticflickr.com/3555/3304908227_047151067e_b.jpg',
 		},
 	],
 }

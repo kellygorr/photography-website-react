@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'open_sansregular';
+	src: url('./assets/fonts/opensans/OpenSans-Regular-webfont.eot');
+	src: url('./assets/fonts/opensans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./assets/fonts/opensans/OpenSans-Regular-webfont.woff') format('woff'),
+		url('./assets/fonts/opensans/OpenSans-Regular-webfont.ttf') format('truetype'),
+		url('./assets/fonts/opensans/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'my_underwoodregular';
+	src: url('./assets/fonts/myunderwood/MyUnderwood-webfont.eot');
+	src: url('./assets/fonts/myunderwood/MyUnderwood-webfont.eot?#iefix') format('embedded-opentype'),
+		url('./assets/fonts/myunderwood/MyUnderwood-webfont.woff') format('woff'),
+		url('./assets/fonts/myunderwood/MyUnderwood-webfont.ttf') format('truetype'),
+		url('./assets/fonts/myunderwood/MyUnderwood-webfont.svg#my_underwoodregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'mohaveregular';
+	src: url('./assets/fonts/mohave/mohave-regular-webfont.woff2') format('woff2'),
+		url('./assets/fonts/mohave/mohave-regular-webfont.woff') format('woff'),
+		url('./assets/fonts/mohave/mohave-regular-webfont.otf') format('opentype'),
+		url('./assets/fonts/mohave/mohave-regular-webfont.ttf') format('truetype'),
+		url('./assets/fonts/mohave/mohave-regular-webfont.svg#mohaveregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

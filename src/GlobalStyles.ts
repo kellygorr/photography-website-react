@@ -1,9 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
+import './fonts.css'
 
 export const AccentColor = '#181818'
+export const PrimaryAccentColor = '#FFFFFF'
 export const PrimaryColor = '#FFFFFF'
-export const PrimaryHoverColor = '#757575'
 export const PrimaryColorBg = '#303030'
+export const LoadingColor = '#212121'
 
 export const GlobalStyles = createGlobalStyle`
 	* {
@@ -12,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
 		padding: 0;
 		box-sizing: border-box;
 		border-spacing: 0px;
+		font-weight:normal;
 	}
 
 	*:before,
@@ -20,10 +23,11 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	html,
-	body {
-		height: 100%;
+	body, #root {
+		width: 100%;
 		margin: 0;
 		padding: 0;
+		font-family: 'open_sansregular';
 	}
 
 	*:focus {
@@ -38,6 +42,7 @@ export const GlobalStyles = createGlobalStyle`
 	a {
 		color: inherit;
 		text-decoration: inherit;
+		font-family: 'open_sansregular';
 	}
 
 `

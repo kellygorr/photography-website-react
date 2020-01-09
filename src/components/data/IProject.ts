@@ -1,19 +1,37 @@
 export enum TagType {
-	XboxOne = 'Xbox One',
+	Xbox = 'Xbox',
 	Poll = 'poll',
 	Quiz = 'quiz',
-	InteractiveVideo = 'interactive video',
 	Plugin = 'plugin',
-	UIUX = 'UI/UX',
-	Tool = 'tool',
-	Design = 'design',
-	InterfaceDesign = 'interface design',
-	Illustration = 'illustration',
+	Tooling = 'tooling',
 	Infographic = 'infographic',
 	Website = 'website',
-	WebDesign = 'web design',
-	MobileDesign = 'mobile design',
-	EmailDesign = 'email design',
+	Mobile = 'mobile',
+	Web = 'web',
+	Kinect = 'Xbox Kinect',
+	Print = 'print',
+}
+export enum SkillType {
+	UIUX = 'UI-UX',
+	Design = 'design',
+	Illustration = 'illustration',
+	JQuery = 'jQuery',
+	JavaScript = 'JavaScript',
+	React = 'React',
+	TypeScript = 'TypeScript',
+	AngularJS = 'AngularJS',
+	PHP = 'PHP',
+	MySQL = 'MySQL',
+	Ajax = 'Ajax',
+	JSON = 'JSON',
+	HTML = 'HTML',
+	CSS = 'CSS',
+}
+
+export enum ToolType {
+	Illustrator = 'Illustrator',
+	Photoshop = 'Photoshop',
+	InDesign = 'InDesign',
 }
 
 export enum SectionType {

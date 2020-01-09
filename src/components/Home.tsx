@@ -1,21 +1,26 @@
 import * as React from 'react'
 import styled from 'styled-components/macro'
-import { Thumbnail } from './Thumbnail'
+import { Thumbnail } from './shared/Thumbnail'
 import { projects } from './data'
-
+import { darken } from 'polished'
+import { PrimaryColorBg } from '../GlobalStyles'
 export const Home: React.FC = () => {
+	// console.log('CHANGE KEY TO PROJECT TITLE')
 	return (
 		<Gallery>
-			{projects.map((project) => (
-				<Row>
-					<Title>{project.title}</Title>
-					<Thumbnails>
-						{project.photos.map((photo) => (
-							<Thumbnail key={project.title} title={project.title} photo={photo} />
-						))}
-					</Thumbnails>
-				</Row>
-			))}
+			{projects.map((project, index) => {
+				const bgColor = darken(index / projects.length / projects.length, PrimaryColorBg)
+				return (
+					<Row key={index} style={{ backgroundColor: bgColor }}>
+						<Title>{project.title}</Title>
+						<Thumbnails>
+							{project.photos.map((photo, index) => (
+								<Thumbnail key={project.title + index} index={index} title={project.title} photo={photo} />
+							))}
+						</Thumbnails>
+					</Row>
+				)
+			})}
 		</Gallery>
 	)
 }
@@ -23,10 +28,11 @@ export const Home: React.FC = () => {
 const Gallery = styled.div`
 	width: 100%;
 	display: grid;
-	grid-gap: 10px;
-	padding-top: 0;
 `
-const Title = styled.h2``
+const Title = styled.h2`
+	padding: 10px;
+	font-family: 'mohaveregular';
+`
 const Row = styled.div`
 	overflow: hidden;
 `
@@ -52,7 +58,11 @@ const Thumbnails = styled.div`
 	&:after {
 		content: '';
 		height: 10px; /*  % does not work */
-		min-width: 10%;
-		width: 10%;
+		min-width: 3%;
+		width: 3%;
+	}
+
+	& a:last-child {
+		margin-right: 0;
 	}
 `
