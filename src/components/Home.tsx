@@ -4,18 +4,22 @@ import { Thumbnail } from './shared/Thumbnail'
 import { projects } from './data'
 import { darken } from 'polished'
 import { PrimaryColorBg } from '../GlobalStyles'
-export const Home: React.FC = () => {
-	// console.log('CHANGE KEY TO PROJECT TITLE')
+
+interface IHomeProps {
+	isVisible: boolean
+}
+export const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
+	console.log('HOME BUILT')
 	return (
-		<Gallery>
+		<Gallery style={{ display: props.isVisible ? 'grid' : 'none' }}>
 			{projects.map((project, index) => {
 				const bgColor = darken(index / projects.length / projects.length, PrimaryColorBg)
 				return (
-					<Row key={index} style={{ backgroundColor: bgColor }}>
+					<Row key={project.title} style={{ backgroundColor: bgColor }}>
 						<Title>{project.title}</Title>
 						<Thumbnails>
 							{project.photos.map((photo, index) => (
-								<Thumbnail key={project.title + index} index={index} title={project.title} photo={photo} />
+								<Thumbnail key={photo.img} index={index} title={project.title} photo={photo} />
 							))}
 						</Thumbnails>
 					</Row>
@@ -27,7 +31,6 @@ export const Home: React.FC = () => {
 
 const Gallery = styled.div`
 	width: 100%;
-	display: grid;
 `
 const Title = styled.h2`
 	padding: 10px;

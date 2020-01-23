@@ -7,7 +7,7 @@ In the project directory, you can run:
 ## .env file setup
 
 The base url for images and fonts needs to be added to the .env file (create file and add the lines below)
-REACT_APP_IMAGE_URL=http://www.kellygorr.com/
+REACT_APP_IMAGE_URL=http://www.kellygorr.com/sites/photography/media/images/
 
 ### `yarn start`
 

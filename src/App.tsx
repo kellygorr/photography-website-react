@@ -17,8 +17,8 @@ const App: React.FC = () => {
 					<Route exact path={['/', '/about']} render={() => <HeaderContent />} />
 				</Header>
 				<Canvas>
+					<Route path={['/']} render={({ match }) => <Home isVisible={match.isExact} />} />
 					<Switch>
-						<Route exact path="/" render={() => <Home />} />
 						<Route path="/about" render={() => <About />} />
 						<Route
 							path="/page/:title?"
@@ -47,7 +47,7 @@ export default App
 
 const AppContainer = styled.div`
 	position: relative;
-	height: 100%;
+	height: 100vh;
 	min-height: 100vh;
 	width: 100%;
 	display: grid;
@@ -55,6 +55,7 @@ const AppContainer = styled.div`
 
 	color: ${PrimaryColor};
 	background-color: ${PrimaryColorBg};
+	overflow-y: auto;
 `
 const Header = styled.header`
 	grid-row: header;

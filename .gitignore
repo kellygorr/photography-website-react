@@ -26,3 +26,4 @@ package-lock.json
 
 # assets
 assets/
+src/react-app-env.d.ts

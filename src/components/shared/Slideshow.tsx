@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import styled from 'styled-components/macro'
 import { IPhotos } from '../data/IProject'
+import { Slide } from './Slide'
 
 interface IPageProps {
 	index: number
@@ -47,9 +48,7 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 					}}
 				>
 					{props.data.map((slide: IPhotos, index) => (
-						<Slide key={index}>
-							<img src={slide.img} alt={slide.img} />
-						</Slide>
+						<Slide key={index} image={slide.img} />
 					))}
 				</Slides>
 			</Container>
@@ -84,11 +83,11 @@ const Container = styled.div`
 	flex: 1;
 	align-items: center;
 	width: 100%;
-	overflow: hidden;
 `
 const Slides = styled.div`
 	display: flex;
 	align-items: center;
+	width: 100%;
 	/* Hide scrollbars  */
 	overflow: -moz-scrollbars-none;
 	-ms-overflow-style: none;
@@ -103,19 +102,6 @@ const Slides = styled.div`
 	-webkit-overflow-scrolling: touch;
 `
 
-const Slide = styled.div`
-	min-width: 100%;
-	scroll-snap-align: start;
-	text-align: center;
-	position: relative;
-	border: 2px solid transparent;
-
-	img {
-		width: 100%;
-		max-width: 1080px;
-		max-height: 1080px;
-	}
-`
 const SlideIndex = styled.div``
 
 const Directions = styled.div``
