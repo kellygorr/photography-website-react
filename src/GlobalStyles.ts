@@ -4,7 +4,7 @@ import './fonts.css'
 export const AccentColor = '#181818'
 export const PrimaryAccentColor = '#FFFFFF'
 export const PrimaryColor = '#FFFFFF'
-export const PrimaryColorBg = '#303030'
+export const PrimaryColorBg = '#131313'
 export const LoadingColor = '#212121'
 
 export const GlobalStyles = createGlobalStyle`

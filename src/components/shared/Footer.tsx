@@ -5,8 +5,8 @@ import { SkillType } from '../data/IProject'
 
 const websiteTags = [SkillType.TypeScript, SkillType.React, SkillType.HTML, SkillType.CSS]
 
-export const Footer: React.FC<{ backgroundColor: string }> = (props: { backgroundColor: string }) => (
-	<Container style={{ backgroundColor: props.backgroundColor }}>
+export const Footer: React.FC = () => (
+	<Container>
 		<Title>Contact/Resume</Title>
 		<Contact>
 			<a href="https://www.linkedin.com/in/kellygorr/">LinkedIn</a>
@@ -34,6 +34,7 @@ const Container = styled.div`
 	color: ${PrimaryAccentColor};
 	padding: 40px 5%;
 	font-size: 0.9em;
+	background-color: #000000;
 `
 const Title = styled.div`
 	margin-top: 10px;

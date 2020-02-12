@@ -5,19 +5,33 @@ import { Home, About, Page } from './components'
 import { Header as HeaderContent, Footer as FooterContent } from './components/shared'
 import { projects } from './components/data'
 import { GlobalStyles, PrimaryColorBg, PrimaryColor } from './GlobalStyles'
-import { darken } from 'polished'
 
 const App: React.FC = () => {
-	const bgColor = darken((projects.length - 1) / projects.length / projects.length, PrimaryColorBg)
+	const [isHomepage, setIsHomepage] = React.useState(true)
+	const [homeScrollPosition, setHomeScrollPosition] = React.useState(0)
+	const appContainerRef = React.useRef(null)
+
+	React.useEffect(() => {
+		if (isHomepage) {
+			appContainerRef.current.scrollTo(0, homeScrollPosition)
+		}
+	}, [isHomepage, homeScrollPosition])
+
 	return (
 		<Router>
-			<AppContainer>
+			<AppContainer ref={appContainerRef}>
 				<GlobalStyles />
 				<Header>
 					<Route exact path={['/', '/about']} render={() => <HeaderContent />} />
 				</Header>
 				<Canvas>
-					<Route path={['/']} render={({ match }) => <Home isVisible={match.isExact} />} />
+					<Route
+						path="/"
+						render={({ match }) => {
+							setIsHomepage(true)
+							return <Home isVisible={match.isExact} />
+						}}
+					/>
 					<Switch>
 						<Route path="/about" render={() => <About />} />
 						<Route
@@ -27,16 +41,17 @@ const App: React.FC = () => {
 									(project) =>
 										match.params.title.replace(/[^\w\s]/gi, '') === project.title.replace(' ', '').toLowerCase()
 								)
-
-								return (
-									project && <Page data={project} index={location.state ? location.state.index : 0} bgColor={bgColor} />
-								)
+								if (appContainerRef.current && isHomepage) {
+									setHomeScrollPosition(appContainerRef.current.scrollTop)
+								}
+								setIsHomepage(false)
+								return project && <Page data={project} index={location.state ? location.state.index : 0} />
 							}}
 						/>
 					</Switch>
 				</Canvas>
 				<Footer>
-					<Route exact path={['/', '/about']} render={() => <FooterContent backgroundColor={bgColor} />} />
+					<Route exact path={['/', '/about']} render={() => <FooterContent />} />
 				</Footer>
 			</AppContainer>
 		</Router>

@@ -1,13 +1,18 @@
 import { IProject } from '../IProject'
 
-const img1 = process.env.REACT_APP_IMAGE_URL + 'bee_lavender_2_1000wordsart.png'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'Flowers/bee_lavender_3_kellygorr.jpg'
 const img2 = process.env.REACT_APP_IMAGE_URL + 'crocus_duo_1000wordsart2.png'
-const img3 = process.env.REACT_APP_IMAGE_URL + 'dandelion_2_1000wordsart.png'
-const img4 = process.env.REACT_APP_IMAGE_URL + 'dandelion_seeds_1000wordsart.png'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'Flowers/dandelion_2_kellygorr.jpg'
+const img4 = process.env.REACT_APP_IMAGE_URL + 'Flowers/dandelion_seeds_kellygorr.jpg'
 const img5 = process.env.REACT_APP_IMAGE_URL + 'large_crocus_photo_1000wordsart.png'
-const img6 = process.env.REACT_APP_IMAGE_URL + 'rain_drop_1_1000wordsart.png'
-const img7 = process.env.REACT_APP_IMAGE_URL + 'white_flower_5_1000wordsart.png'
-const img8 = process.env.REACT_APP_IMAGE_URL + 'snow_flowers_1000wordsart3.png'
+const img6 = process.env.REACT_APP_IMAGE_URL + 'Flowers/rain_drop_1_kellygorr.jpg'
+const img7 = process.env.REACT_APP_IMAGE_URL + 'Flowers/white_flower_5_kellygorr.jpg'
+const img8 = process.env.REACT_APP_IMAGE_URL + 'Flowers/snow_flowers_kellygorr.jpg'
+const img9 = process.env.REACT_APP_IMAGE_URL + 'Flowers/daisies_flowers_kellygorr.jpg'
+const img10 = process.env.REACT_APP_IMAGE_URL + 'Flowers/butterfly_1_kellygorr.jpg'
+const img11 = process.env.REACT_APP_IMAGE_URL + 'Flowers/butterfly_2_kellygorr.jpg'
+const img12 = process.env.REACT_APP_IMAGE_URL + 'Flowers/butterfly_3_kellygorr.jpg'
+const img13 = process.env.REACT_APP_IMAGE_URL + 'Flowers/daisies_2_kellygorr.jpg'
 
 export const flowers: IProject = {
 	title: 'Flowers',
@@ -52,6 +57,27 @@ export const flowers: IProject = {
 			title: 'Snow',
 			thumbnail: img8,
 			img: img8,
+		},
+		{
+			title: 'Daisies',
+			thumbnail: img9,
+			img: img9,
+		},
+		{
+			thumbnail: img10,
+			img: img10,
+		},
+		{
+			thumbnail: img11,
+			img: img11,
+		},
+		{
+			thumbnail: img12,
+			img: img12,
+		},
+		{
+			thumbnail: img13,
+			img: img13,
 		},
 	],
 }

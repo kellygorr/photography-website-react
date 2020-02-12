@@ -3,6 +3,7 @@ import * as React from 'react'
 import styled from 'styled-components/macro'
 import { IPhotos } from '../data/IProject'
 import { Slide } from './Slide'
+import { Link } from 'react-router-dom'
 
 interface IPageProps {
 	index: number
@@ -32,33 +33,35 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 		}
 	}, [isScrolling])
 
-	// console.log('CHANGE KEY TO IMG NAME')
 	return (
-		<>
-			<Container>
-				<Slides
-					ref={slideshowRef}
-					onScroll={() => {
-						setIsScrolling(true)
-						clearTimeout(ScrollTimer)
+		<Container>
+			<Slides
+				ref={slideshowRef}
+				onScroll={() => {
+					setIsScrolling(true)
+					clearTimeout(ScrollTimer)
 
-						ScrollTimer = setTimeout(function() {
-							setIsScrolling(false)
-						}, 250)
-					}}
-				>
-					{props.data.map((slide: IPhotos, index) => (
-						<Slide key={index} image={slide.img} />
-					))}
-				</Slides>
-			</Container>
+					ScrollTimer = setTimeout(function() {
+						setIsScrolling(false)
+					}, 250)
+				}}
+			>
+				{props.data.map((slide: IPhotos) => (
+					<Slide key={slide.img} image={slide.img} />
+				))}
+			</Slides>
+
+			<SlideHeader>
+				<CloseButton to="/">X</CloseButton>
+			</SlideHeader>
+
 			<SlideFooter>
 				<SlideIndex>
 					{props.title} {active + 1} of {props.data.length}
 				</SlideIndex>
 				<Directions>(Scroll to navigate)</Directions>
 			</SlideFooter>
-		</>
+		</Container>
 	)
 }
 
@@ -79,15 +82,34 @@ const isElementCentered = (el: HTMLDivElement) => {
 }
 
 const Container = styled.div`
-	display: flex;
-	flex: 1;
-	align-items: center;
+	flex-direction: column;
 	width: 100%;
+	height: 100%;
 `
-const Slides = styled.div`
+
+const SlideHeader = styled.div`
+	position: absolute;
+	top: 0;
 	display: flex;
+	justify-content: flex-end;
 	align-items: center;
 	width: 100%;
+	padding: 20px 0;
+`
+const CloseButton = styled(Link)`
+	display: flex;
+	align-items: center;
+	background-color: #000000;
+	height: 100%;
+	padding: 10px 20px 10px 10px;
+`
+
+const Slides = styled.div`
+	height: calc(100vh - 100px);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	width: inherit;
 	/* Hide scrollbars  */
 	overflow: -moz-scrollbars-none;
 	-ms-overflow-style: none;
@@ -95,6 +117,7 @@ const Slides = styled.div`
 		width: 0 !important;
 	}
 	/* Horizontal scrolling only */
+	overflow: hidden;
 	overflow-x: auto;
 	overflow-y: hidden;
 	/* snap mandatory on horizontal axis  */
@@ -105,7 +128,9 @@ const Slides = styled.div`
 const SlideIndex = styled.div``
 
 const Directions = styled.div``
+
 const SlideFooter = styled.div`
+	height: 100px;
 	width: 100%;
 	text-align: center;
 	padding: 20px;

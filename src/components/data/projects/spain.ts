@@ -1,8 +1,8 @@
 import { IProject } from '../IProject'
 
-const img1 = process.env.REACT_APP_IMAGE_URL + 'madrid_street_1000wordsart.png'
-const img2 = process.env.REACT_APP_IMAGE_URL + 'Sinagoga_La_Blanca_1000wordsart.png'
-const img3 = process.env.REACT_APP_IMAGE_URL + 'toledo_cathedral_1000wordsart.png'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'Spain/madrid_street_kellygorr.jpg'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'Spain/Sinagoga_La_Blanca_kellygorr.jpg'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'Spain/toledo_cathedral_kellygorr.jpg'
 
 export const spain: IProject = {
 	title: 'Spain',

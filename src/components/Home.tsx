@@ -2,20 +2,18 @@ import * as React from 'react'
 import styled from 'styled-components/macro'
 import { Thumbnail } from './shared/Thumbnail'
 import { projects } from './data'
-import { darken } from 'polished'
-import { PrimaryColorBg } from '../GlobalStyles'
 
 interface IHomeProps {
 	isVisible: boolean
 }
 export const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
 	console.log('HOME BUILT')
+
 	return (
 		<Gallery style={{ display: props.isVisible ? 'grid' : 'none' }}>
-			{projects.map((project, index) => {
-				const bgColor = darken(index / projects.length / projects.length, PrimaryColorBg)
+			{projects.map((project) => {
 				return (
-					<Row key={project.title} style={{ backgroundColor: bgColor }}>
+					<Row key={project.title}>
 						<Title>{project.title}</Title>
 						<Thumbnails>
 							{project.photos.map((photo, index) => (
@@ -31,9 +29,10 @@ export const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
 
 const Gallery = styled.div`
 	width: 100%;
+	grid-auto-rows: 320px;
 `
 const Title = styled.h2`
-	padding: 10px;
+	padding: 0 10px 10px 10px;
 	font-family: 'mohaveregular';
 `
 const Row = styled.div`

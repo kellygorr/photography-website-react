@@ -1,12 +1,14 @@
 import { IProject } from '../IProject'
 
 const img1 = process.env.REACT_APP_IMAGE_URL + 'cat_nap_1_1000wordsart.png'
-const img2 = process.env.REACT_APP_IMAGE_URL + 'cat_portrait_1_1000wordsart.png'
-const img3 = process.env.REACT_APP_IMAGE_URL + 'corgi_dog_1_1000wordsart.png'
-const img4 = process.env.REACT_APP_IMAGE_URL + 'pygmy_goat_1_1000wordsart.png'
-const img5 = process.env.REACT_APP_IMAGE_URL + 'pygmy_goat_2_1000wordsart.png'
-const img6 = process.env.REACT_APP_IMAGE_URL + 'pygmy_goat_6_1000wordsart.png'
-const img7 = process.env.REACT_APP_IMAGE_URL + 'yellow_labrador_retriever_1000wordsart.png'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'Pets/cat_portrait_1_kellygorr.jpg'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'Pets/corgi_dog_1_kellygorr.jpg'
+const img4 = process.env.REACT_APP_IMAGE_URL + 'Pets/pygmy_goat_1_kellygorr.jpg'
+const img5 = process.env.REACT_APP_IMAGE_URL + 'Pets/pygmy_goat_2_kellygorr.jpg'
+const img6 = process.env.REACT_APP_IMAGE_URL + 'Pets/pygmy_goat_6_kellygorr.jpg'
+const img7 = process.env.REACT_APP_IMAGE_URL + 'Pets/yellow_labrador_retriever_kellygorr.jpg'
+const img8 = process.env.REACT_APP_IMAGE_URL + 'Pets/pygmy_goat_4_kellygorr.jpg'
+const img9 = process.env.REACT_APP_IMAGE_URL + 'Pets/corgi_dog_2_kellygorr.jpg'
 
 export const pets: IProject = {
 	title: 'Pets',
@@ -46,6 +48,16 @@ export const pets: IProject = {
 			title: 'Cory',
 			thumbnail: img3,
 			img: img3,
+		},
+		{
+			title: 'Basil',
+			thumbnail: img8,
+			img: img8,
+		},
+		{
+			title: 'Hasil',
+			thumbnail: img9,
+			img: img9,
 		},
 	],
 }
