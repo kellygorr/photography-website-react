@@ -29,14 +29,15 @@ export const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
 
 const Gallery = styled.div`
 	width: 100%;
-	grid-auto-rows: 320px;
+	/* grid-auto-rows: 320px; */
 `
 const Title = styled.h2`
-	padding: 0 10px 10px 10px;
+	padding: 0 10px 10px 3%;
 	font-family: 'mohaveregular';
 `
 const Row = styled.div`
 	overflow: hidden;
+	padding-bottom: 10px;
 `
 
 const Thumbnails = styled.div`
@@ -50,7 +51,7 @@ const Thumbnails = styled.div`
 		width: 0 !important;
 	}
 	/* Horizontal scrolling only */
-	overflow-x: auto;
+	overflow-x: scroll;
 	overflow-y: hidden;
 
 	-webkit-overflow-scrolling: touch;

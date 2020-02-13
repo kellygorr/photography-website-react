@@ -1,56 +1,95 @@
 import * as React from 'react'
-import styled from 'styled-components/macro'
+import styled, { css } from 'styled-components/macro'
 import { PrimaryAccentColor } from '../../GlobalStyles'
 import { SkillType } from '../data/IProject'
+import { FooterList } from './FooterList'
 
 const websiteTags = [SkillType.TypeScript, SkillType.React, SkillType.HTML, SkillType.CSS]
 
+export interface IFooterList {
+	title: string
+	link: ILink[]
+}
+
+interface ILink {
+	title: string
+	URL: string
+	tags?: string[]
+}
+
+const info: IFooterList[] = [
+	{
+		title: 'Contact/Resume',
+		link: [
+			{
+				title: 'LinkedIn',
+				URL: 'https://www.linkedin.com/in/kellygorr/',
+			},
+		],
+	},
+	{
+		title: 'Portfolio',
+		link: [
+			{
+				title: 'kellygorr.com',
+				URL: 'https://kellygorr.com/',
+			},
+		],
+	},
+	{
+		title: 'Photography',
+		link: [
+			{
+				title: 'photography.kellygorr.com',
+				URL: 'https://photography/kellygorr.com/',
+			},
+		],
+	},
+]
+
+const sites: IFooterList[] = [
+	{
+		title: 'Website Info',
+		link: [
+			{
+				tags: websiteTags,
+				title: 'https://github.com/kellygorr/gallery-website-react',
+				URL: 'https://github.com/kellygorr/gallery-website-react',
+			},
+		],
+	},
+]
+
 export const Footer: React.FC = () => (
 	<Container>
-		<Title>Contact/Resume</Title>
-		<Contact>
-			<a href="https://www.linkedin.com/in/kellygorr/">LinkedIn</a>
-		</Contact>
-		<Title>Portfolio</Title>
-		<Contact>
-			<a href="https://kellygorr.com/">kellygorr.com</a>
-		</Contact>
-		<Title>Website Info</Title>
-		<Tags>[{websiteTags.map((tag, index) => (index === websiteTags.length - 1 ? tag : tag + ', '))}]</Tags>
-
-		<Contact>
-			<a href="https://github.com/kellygorr/gallery-website-react">https://github.com/kellygorr/gallery-website-react</a>
-		</Contact>
+		<Left>
+			<FooterList list={info} />
+		</Left>
+		<Right>
+			<FooterList list={sites} />
+		</Right>
 	</Container>
 )
 
 const Container = styled.div`
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
 	width: 100%;
 	height: 100%;
 	color: ${PrimaryAccentColor};
-	padding: 40px 5%;
 	font-size: 0.9em;
 	background-color: #000000;
-`
-const Title = styled.div`
-	margin-top: 10px;
-	&:first-child {
-		margin: 0;
-	}
-	&::after {
-		content: ': ';
-	}
-`
-const Contact = styled.div`
-	&:hover {
-		text-decoration: underline;
-	}
+	justify-content: space-between;
 `
 
-const Tags = styled.div`
-	width: 100%;
+const Columns = css`
+	padding: 40px 3%;
+	display: flex;
+	flex-direction: column;
+`
+
+const Left = styled.div`
+	${Columns}
+`
+const Right = styled.div`
+	${Columns}
 `
