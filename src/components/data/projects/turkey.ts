@@ -1,6 +1,5 @@
 import { IProject } from '../IProject'
 
-const img5 = process.env.REACT_APP_IMAGE_URL + 'istanbul_column_2_1000wordsart.png'
 const img6 = process.env.REACT_APP_IMAGE_URL + 'Turkey/1.jpg'
 const img7 = process.env.REACT_APP_IMAGE_URL + 'Turkey/2.jpg'
 const img8 = process.env.REACT_APP_IMAGE_URL + 'Turkey/3.jpg'
@@ -39,11 +38,6 @@ export const turkey: IProject = {
 		{
 			thumbnail: img35,
 			img: img35,
-		},
-		{
-			title: 'Istanbul',
-			thumbnail: img5,
-			img: img5,
 		},
 		{
 			title: 'Didyma',

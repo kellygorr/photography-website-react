@@ -42,7 +42,7 @@ const Title = styled.div`
 	}
 `
 const StyledLink = styled.a`
-	word-wrap: none;
+	white-space: nowrap;
 	&:hover {
 		text-decoration: underline;
 	}
