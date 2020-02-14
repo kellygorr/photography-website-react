@@ -4,8 +4,6 @@ import { PrimaryAccentColor } from '../../GlobalStyles'
 import { SkillType } from '../data/IProject'
 import { FooterList } from './FooterList'
 
-const websiteTags = [SkillType.TypeScript, SkillType.React, SkillType.HTML, SkillType.CSS]
-
 export interface IFooterList {
 	title: string
 	link: ILink[]
@@ -17,7 +15,7 @@ interface ILink {
 	tags?: string[]
 }
 
-const info: IFooterList[] = [
+const sites: IFooterList[] = [
 	{
 		title: 'Contact/Resume',
 		link: [
@@ -41,20 +39,20 @@ const info: IFooterList[] = [
 		link: [
 			{
 				title: 'photography.kellygorr.com',
-				URL: 'https://photography/kellygorr.com/',
+				URL: 'https://photography.kellygorr.com/',
 			},
 		],
 	},
 ]
 
-const sites: IFooterList[] = [
+const info: IFooterList[] = [
 	{
-		title: 'Website Info',
+		title: 'About Website',
 		link: [
 			{
-				tags: websiteTags,
-				title: 'https://github.com/kellygorr/gallery-website-react',
-				URL: 'https://github.com/kellygorr/gallery-website-react',
+				tags: [SkillType.TypeScript, SkillType.React, SkillType.HTML, SkillType.CSS],
+				title: 'https://github.com/kellygorr',
+				URL: 'https://github.com/kellygorr?tab=repositories',
 			},
 		],
 	},
@@ -63,10 +61,10 @@ const sites: IFooterList[] = [
 export const Footer: React.FC = () => (
 	<Container>
 		<Left>
-			<FooterList list={info} />
+			<FooterList list={sites} />
 		</Left>
 		<Right>
-			<FooterList list={sites} />
+			<FooterList list={info} />
 		</Right>
 	</Container>
 )
