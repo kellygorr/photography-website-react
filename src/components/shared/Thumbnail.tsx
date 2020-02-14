@@ -31,27 +31,14 @@ const ThumbnailContainer = styled(Link)`
 	background-position: center;
 	background-color: ${LoadingColor};
 
-	min-width: 60%;
-	width: 60vw;
-	height: 50vw;
-	min-height: 100px;
+	min-width: 43%;
+
+	height: 33vw;
+	max-height: 250px;
+	max-width: 250px;
 	margin-right: 10px;
 
-	@media (min-width: 450px) {
-		min-width: 43%;
-		width: 43vw;
-		height: 33vw;
-	}
-
-	@media (min-width: 700px) {
-		min-width: 35%;
-		width: 35vw;
-		height: 25vw;
-	}
-
-	@media (min-width: 1000px) {
+	@media (min-width: 895px) {
 		min-width: 350px;
-		width: 250px;
-		height: 250px;
 	}
 `
