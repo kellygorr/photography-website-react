@@ -1,9 +1,9 @@
 import { IProject } from '../IProject'
 
 const img1 = process.env.REACT_APP_IMAGE_URL + 'Beach/Beach_driftwood_kellygorr.jpg'
-const img2 = process.env.REACT_APP_IMAGE_URL + 'sheep_1_1000wordsart.png'
-const img3 = process.env.REACT_APP_IMAGE_URL + 'snow_owl_2_1000wordsart.png'
-const img4 = process.env.REACT_APP_IMAGE_URL + 'tree_tops_1_1000wordsart.png'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'Washington/nw_treck_1_kellygorr.jpg'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'Washington/nw_treck_2_kellygorr.jpg'
+const img4 = process.env.REACT_APP_IMAGE_URL + 'Washington/nw_treck_kellygorr.jpg'
 
 export const washington: IProject = {
 	title: 'Washington',

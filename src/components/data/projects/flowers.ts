@@ -1,10 +1,10 @@
 import { IProject } from '../IProject'
 
 const img1 = process.env.REACT_APP_IMAGE_URL + 'Flowers/bee_lavender_3_kellygorr.jpg'
-const img2 = process.env.REACT_APP_IMAGE_URL + 'crocus_duo_1000wordsart2.png'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'Flowers/crocus_duo_kellygorr.jpg'
 const img3 = process.env.REACT_APP_IMAGE_URL + 'Flowers/dandelion_2_kellygorr.jpg'
 const img4 = process.env.REACT_APP_IMAGE_URL + 'Flowers/dandelion_seeds_kellygorr.jpg'
-const img5 = process.env.REACT_APP_IMAGE_URL + 'large_crocus_photo_1000wordsart.png'
+const img5 = process.env.REACT_APP_IMAGE_URL + 'Flowers/crocus_1_kellygorr.jpg'
 const img6 = process.env.REACT_APP_IMAGE_URL + 'Flowers/rain_drop_1_kellygorr.jpg'
 const img7 = process.env.REACT_APP_IMAGE_URL + 'Flowers/white_flower_5_kellygorr.jpg'
 const img8 = process.env.REACT_APP_IMAGE_URL + 'Flowers/snow_flowers_kellygorr.jpg'

@@ -64,20 +64,24 @@ const AppContainer = styled.div`
 	position: relative;
 	height: 100vh;
 	min-height: 100vh;
-	width: 100%;
+	width: 100vw;
 	display: grid;
 	grid-template-rows: [header] auto [canvas] 1fr [footer] auto;
 
 	color: ${PrimaryColor};
 	background-color: ${PrimaryColorBg};
+	overflow: hidden;
 	overflow-y: auto;
 `
 const Header = styled.header`
+	width: inherit;
 	grid-row: header;
 `
 const Canvas = styled.div`
+	width: inherit;
 	grid-row: canvas;
 `
 const Footer = styled.footer`
+	width: inherit;
 	grid-row: footer;
 `

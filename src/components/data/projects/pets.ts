@@ -1,6 +1,6 @@
 import { IProject } from '../IProject'
 
-const img1 = process.env.REACT_APP_IMAGE_URL + 'cat_nap_1_1000wordsart.png'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'Pets/kody_kellygorr.jpg'
 const img2 = process.env.REACT_APP_IMAGE_URL + 'Pets/cat_portrait_1_kellygorr.jpg'
 const img3 = process.env.REACT_APP_IMAGE_URL + 'Pets/corgi_dog_1_kellygorr.jpg'
 const img4 = process.env.REACT_APP_IMAGE_URL + 'Pets/pygmy_goat_1_kellygorr.jpg'
@@ -14,6 +14,11 @@ export const pets: IProject = {
 	title: 'Pets',
 	subtitle: 'subtitle',
 	photos: [
+		{
+			title: 'Kody',
+			thumbnail: img1,
+			img: img1,
+		},
 		{
 			title: 'Basil',
 			thumbnail: img4,
@@ -33,11 +38,6 @@ export const pets: IProject = {
 			title: 'Sandy',
 			thumbnail: img7,
 			img: img7,
-		},
-		{
-			title: 'Rocky',
-			thumbnail: img1,
-			img: img1,
 		},
 		{
 			title: 'Rocky',

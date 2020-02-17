@@ -1,8 +1,7 @@
 import { IProject } from '../IProject'
 
-const img1 = process.env.REACT_APP_IMAGE_URL + 'chenonceaux_castle_1000wordsart.png'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'France/chenonceaux_castle_1_kellygorr.jpg'
 const img2 = process.env.REACT_APP_IMAGE_URL + 'France/france_paris_1_kellygorr.jpg'
-const img3 = process.env.REACT_APP_IMAGE_URL + 'tower2_1000wordsart.png'
 
 export const france: IProject = {
 	title: 'France',
@@ -17,11 +16,6 @@ export const france: IProject = {
 			title: 'Paris',
 			thumbnail: img2,
 			img: img2,
-		},
-		{
-			title: 'Paris',
-			thumbnail: img3,
-			img: img3,
 		},
 	],
 }

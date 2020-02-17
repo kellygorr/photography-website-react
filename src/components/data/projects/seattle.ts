@@ -1,9 +1,7 @@
 import { IProject } from '../IProject'
 
-const img2 = process.env.REACT_APP_IMAGE_URL + 'gas_works_park_2_1000wordsart.png'
-const img5 = process.env.REACT_APP_IMAGE_URL + 'uw_cherryblossoms_1_1000wordsart.png'
-const img6 = process.env.REACT_APP_IMAGE_URL + 'uw_library_1_1000wordsart.png'
-const img7 = process.env.REACT_APP_IMAGE_URL + 'uw_library_2_1000wordsart.png'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'Seattle/seattle_kellygorr.jpg'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'Seattle/uw_kellygorr.jpg'
 const img8 = process.env.REACT_APP_IMAGE_URL + 'Seattle/seattle_1_kellygorr.jpg'
 const img9 = process.env.REACT_APP_IMAGE_URL + 'Seattle/seattle_2_kellygorr.jpg'
 const img10 = process.env.REACT_APP_IMAGE_URL + 'Seattle/seattle_3_kellygorr.jpg'
@@ -14,24 +12,14 @@ export const seattle: IProject = {
 	subtitle: 'subtitle',
 	photos: [
 		{
-			title: 'Gas works park',
+			title: 'Seattle',
+			thumbnail: img1,
+			img: img1,
+		},
+		{
+			title: 'University of Washington',
 			thumbnail: img2,
 			img: img2,
-		},
-		{
-			title: 'University of Washington',
-			thumbnail: img5,
-			img: img5,
-		},
-		{
-			title: 'University of Washington',
-			thumbnail: img6,
-			img: img6,
-		},
-		{
-			title: 'University of Washington',
-			thumbnail: img7,
-			img: img7,
 		},
 		{
 			title: 'Gas Works Park',
