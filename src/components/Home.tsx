@@ -34,6 +34,7 @@ const Gallery = styled.div`
 const Title = styled.h2`
 	padding: 0 10px 10px 3%;
 	font-family: 'mohaveregular';
+	font-size: 1.75em;
 `
 const Row = styled.div`
 	overflow: hidden;

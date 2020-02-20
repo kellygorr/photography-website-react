@@ -25,5 +25,8 @@ export interface IPhotos {
 	title?: string
 	thumbnail: string
 	img: string
+	date?: string
+	camera?: string
+	lens?: string
 	caption?: string
 }
