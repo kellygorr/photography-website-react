@@ -13,7 +13,6 @@ export const Page: React.FC<IPageProps> = (props: IPageProps) => {
 	if (!props.data) {
 		return null
 	}
-	console.log('RENDER PAGE!!!')
 	return (
 		<Container>
 			<Slideshow index={props.index} title={props.data.title} data={props.data.photos} slideshowRef={createRef<HTMLDivElement>()} />

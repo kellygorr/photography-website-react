@@ -7,8 +7,6 @@ interface IHomeProps {
 	isVisible: boolean
 }
 export const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
-	console.log('HOME BUILT')
-
 	return (
 		<Gallery style={{ display: props.isVisible ? 'grid' : 'none' }}>
 			{projects.map((project) => {
