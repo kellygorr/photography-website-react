@@ -37,8 +37,6 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 		}
 	}, [isScrolling])
 
-	console.log('isScrolling', isScrolling, 'active', active)
-
 	return (
 		<Container>
 			<Header to="/">

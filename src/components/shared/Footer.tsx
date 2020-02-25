@@ -70,17 +70,18 @@ export const Footer: React.FC = () => (
 )
 
 const Container = styled.div`
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	width: 100%;
 	height: 100%;
+	padding: 40px 3%;
+
 	color: ${PrimaryAccentColor};
 	font-size: 0.9em;
 	background-color: #000000;
-	justify-content: space-between;
 `
 
 const Columns = css`
-	padding: 40px 3%;
 	display: flex;
 	flex-direction: column;
 `
