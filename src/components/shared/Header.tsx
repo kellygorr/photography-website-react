@@ -1,12 +1,12 @@
 import * as React from 'react'
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
-import bg from '../../assets/1.jpg'
+// import bg from '../../assets/1.jpg'
 
 export const Header: React.FC = () => {
 	return (
 		<Container>
-			<BackgroundImage src={bg} />
+			{/* <BackgroundImage src={bg} /> */}
 			<Logo to="/">
 				<Subhead>Photography by</Subhead>
 				<HeaderTitle>Kelly Gorr</HeaderTitle>
@@ -47,9 +47,9 @@ const HeaderTitle = styled.h1`
 	letter-spacing: 0.05em;
 `
 
-const BackgroundImage = styled.img`
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-`
+// const BackgroundImage = styled.img`
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// `
