@@ -17,12 +17,11 @@ export enum SkillType {
 
 export interface IProject {
 	title: string
-	subtitle: string
 	photos: IPhotos[]
 }
 
 export interface IPhotos {
-	title?: string
+	title: string
 	thumbnail: string
 	img: string
 	date?: string

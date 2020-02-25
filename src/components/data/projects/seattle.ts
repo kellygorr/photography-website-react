@@ -9,7 +9,6 @@ const img11 = process.env.REACT_APP_IMAGE_URL + 'Seattle/seattle_4_kellygorr.jpg
 const img12 = process.env.REACT_APP_IMAGE_URL + 'Seattle/seattle_5_kellygorr.jpg'
 export const seattle: IProject = {
 	title: 'Seattle',
-	subtitle: 'subtitle',
 	photos: [
 		{
 			title: 'Seattle',
@@ -60,6 +59,7 @@ export const seattle: IProject = {
 			date: '1/1/11',
 		},
 		{
+			title: 'Ballard locks',
 			thumbnail: img12,
 			img: img12,
 			camera: 'Canon',

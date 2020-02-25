@@ -16,7 +16,6 @@ const img13 = process.env.REACT_APP_IMAGE_URL + 'Flowers/daisies_2_kellygorr.jpg
 
 export const flowers: IProject = {
 	title: 'Flowers',
-	subtitle: 'subtitle',
 	photos: [
 		{
 			title: 'Bee',
@@ -24,7 +23,7 @@ export const flowers: IProject = {
 			img: img1,
 		},
 		{
-			title: 'Crocus',
+			title: 'Crocus Duo',
 			thumbnail: img2,
 			img: img2,
 		},
@@ -44,7 +43,7 @@ export const flowers: IProject = {
 			img: img5,
 		},
 		{
-			title: 'Raindrop',
+			title: 'Coneflower',
 			thumbnail: img6,
 			img: img6,
 		},
@@ -64,18 +63,22 @@ export const flowers: IProject = {
 			img: img9,
 		},
 		{
+			title: 'Butterfly',
 			thumbnail: img10,
 			img: img10,
 		},
 		{
+			title: 'Butterfly',
 			thumbnail: img11,
 			img: img11,
 		},
 		{
+			title: 'Butterfly',
 			thumbnail: img12,
 			img: img12,
 		},
 		{
+			title: 'Daisies',
 			thumbnail: img13,
 			img: img13,
 		},

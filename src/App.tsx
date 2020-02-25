@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import styled from 'styled-components/macro'
-import { Home, About, Page } from './components'
+import { Home, Page } from './components'
 import { Header as HeaderContent, Footer as FooterContent } from './components/shared'
 import { projects } from './components/data'
 import { GlobalStyles, PrimaryColorBg, PrimaryColor } from './GlobalStyles'
@@ -33,7 +33,6 @@ const App: React.FC = () => {
 						}}
 					/>
 					<Switch>
-						<Route path="/about" render={() => <About />} />
 						<Route
 							path="/page/:title?"
 							render={({ match, location }) => {
@@ -70,6 +69,7 @@ const AppContainer = styled.div`
 
 	color: ${PrimaryColor};
 	background-color: ${PrimaryColorBg};
+
 	overflow: hidden;
 	overflow-y: auto;
 `

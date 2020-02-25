@@ -12,7 +12,6 @@ const img9 = process.env.REACT_APP_IMAGE_URL + 'Pets/corgi_dog_2_kellygorr.jpg'
 
 export const pets: IProject = {
 	title: 'Pets',
-	subtitle: 'subtitle',
 	photos: [
 		{
 			title: 'Kody',
@@ -35,7 +34,7 @@ export const pets: IProject = {
 			img: img6,
 		},
 		{
-			title: 'Sandy',
+			title: 'Comet',
 			thumbnail: img7,
 			img: img7,
 		},

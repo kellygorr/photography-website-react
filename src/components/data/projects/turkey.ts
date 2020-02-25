@@ -33,126 +33,154 @@ const img35 = process.env.REACT_APP_IMAGE_URL + 'Turkey/obelisk_1_kellygorr.jpg'
 
 export const turkey: IProject = {
 	title: 'Turkey',
-	subtitle: 'subtitle',
 	photos: [
 		{
+			title: 'Istanbul',
 			thumbnail: img35,
 			img: img35,
 		},
 		{
-			title: 'Didyma',
+			title: 'Blue Mosque',
 			thumbnail: img6,
 			img: img6,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img7,
 			img: img7,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img8,
 			img: img8,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img9,
 			img: img9,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img10,
 			img: img10,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img11,
 			img: img11,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img12,
 			img: img12,
 		},
 		{
+			title: 'Mt. Olympos',
 			thumbnail: img13,
 			img: img13,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img14,
 			img: img14,
 		},
 		{
+			title: 'Istanbul',
 			thumbnail: img15,
 			img: img15,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img16,
 			img: img16,
 		},
 		{
+			title: 'Blue Mosque',
 			thumbnail: img17,
 			img: img17,
 		},
 		{
+			title: 'Blue Mosque',
 			thumbnail: img18,
 			img: img18,
 		},
 		{
+			title: 'Istanbul',
 			thumbnail: img19,
 			img: img19,
 		},
 		{
+			title: 'Ephesus',
 			thumbnail: img20,
 			img: img20,
 		},
 		{
+			title: 'Pamukkale',
 			thumbnail: img21,
 			img: img21,
 		},
 		{
+			title: 'Cappadocia',
 			thumbnail: img22,
 			img: img22,
 		},
 		{
+			title: 'Blue Mosque',
 			thumbnail: img23,
 			img: img23,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img24,
 			img: img24,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img25,
 			img: img25,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img26,
 			img: img26,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img27,
 			img: img27,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img28,
 			img: img28,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img29,
 			img: img29,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img30,
 			img: img30,
 		},
 		{
+			title: 'Turkey',
 			thumbnail: img31,
 			img: img31,
 		},
 		{
+			title: 'Cappadocia',
 			thumbnail: img32,
 			img: img32,
 		},
 		{
+			title: 'Cappadocia',
 			thumbnail: img33,
 			img: img33,
 		},
 		{
+			title: 'Cappadocia',
 			thumbnail: img34,
 			img: img34,
 		},

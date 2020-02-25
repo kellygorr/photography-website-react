@@ -4,7 +4,6 @@ const img2 = process.env.REACT_APP_IMAGE_URL + 'France/france_paris_1_kellygorr.
 
 export const france: IProject = {
 	title: 'France',
-	subtitle: 'subtitle',
 	photos: [
 		{
 			title: 'Paris',

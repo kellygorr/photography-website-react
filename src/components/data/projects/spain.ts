@@ -6,7 +6,6 @@ const img3 = process.env.REACT_APP_IMAGE_URL + 'Spain/toledo_cathedral_kellygorr
 
 export const spain: IProject = {
 	title: 'Spain',
-	subtitle: 'subtitle',
 	photos: [
 		{
 			title: 'Toledo',
