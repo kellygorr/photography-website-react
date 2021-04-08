@@ -3,7 +3,7 @@ import * as React from 'react'
 import styled from 'styled-components/macro'
 import { IPhotos } from '../data/IProject'
 import { Link } from 'react-router-dom'
-import { PrimaryColorBg } from '../../GlobalStyles'
+import { Overlay } from '../../GlobalStyles'
 
 interface IPageProps {
 	index: number
@@ -19,7 +19,7 @@ let InfoTimer: number
 export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 	slideshowRef = props.slideshowRef
 	const [active, setActive] = React.useState(props.index)
-	const [activeInfo, setActiveInfo] = React.useState(null)
+	const [info, setInfo] = React.useState(false)
 	const [isScrolling, setIsScrolling] = React.useState(false)
 
 	React.useEffect(() => {
@@ -37,6 +37,10 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 		}
 	}, [isScrolling])
 
+	const handleIndexClick = () => {
+		setInfo(!info)
+	}
+
 	return (
 		<Container>
 			<Header to="/">
@@ -46,7 +50,7 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 			<Slides
 				ref={slideshowRef}
 				onScroll={() => {
-					setActiveInfo(null)
+					setInfo(false)
 					clearTimeout(ScrollTimer)
 					clearTimeout(InfoTimer)
 
@@ -58,16 +62,16 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 				onPointerDown={() => {
 					clearTimeout(InfoTimer)
 
-					if (!activeInfo && activeInfo !== 0 && !isScrolling) {
+					if (!info && !isScrolling) {
 						InfoTimer = setTimeout(function() {
-							setActiveInfo(active)
+							setInfo(true)
 						}, 250)
 					}
 				}}
 				onPointerUp={(e) => {
 					clearTimeout(InfoTimer)
 
-					if (!activeInfo && activeInfo !== 0 && !isScrolling) {
+					if (!info && !isScrolling) {
 						handleSlideClick(e, active)
 					}
 				}}
@@ -75,19 +79,22 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 				{props.data.map((slide: IPhotos, index: number) => (
 					<Slide key={index}>
 						<img src={slide.img} alt={slide.img} />
-						{activeInfo === index && (
+						{info && (
 							<Info
 								onClick={(e) => {
 									e.stopPropagation()
-									setActiveInfo(null)
+									setInfo(false)
 								}}
 							>
-								<InfoBackground />
 								<InfoContainer>
 									<span>{slide.title}</span>
 									<span>{slide.date && 'Date: ' + slide.date}</span>
-									<span>{slide.camera && 'Camera: ' + slide.camera}</span>
-									<span>{slide.lens}</span>
+									{Object.keys(slide.info).map((x, index) => (
+										<span key={index}>
+											<InfoTitle>{`${x}: `}</InfoTitle>
+											<span>{slide.info[x]}</span>
+										</span>
+									))}
 								</InfoContainer>
 							</Info>
 						)}
@@ -96,8 +103,8 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 			</Slides>
 
 			<Footer>
-				<SlideIndex>
-					{active + 1} <Subscript>of</Subscript> {props.data.length}
+				<SlideIndex onClick={handleIndexClick}>
+					{active + 1} <InfoCircle>i</InfoCircle> {props.data.length}
 				</SlideIndex>
 			</Footer>
 		</Container>
@@ -132,7 +139,6 @@ const HEADER_CLOSE = HEADER_HEIGHT / 2
 
 const FOOTER_HEIGHT = 5
 const FOOTER_TEXT_HEIGHT = FOOTER_HEIGHT - 2
-const FOOTER_SUBTEXT_HEIGHT = FOOTER_TEXT_HEIGHT / 1.5
 
 const FOOTER_HEADER_HEIGHT = HEADER_HEIGHT + FOOTER_HEIGHT
 
@@ -216,16 +222,9 @@ const Info = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: ${Overlay};
 `
-const InfoBackground = styled.div`
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: inherit;
-	height: inherit;
-	background-color: ${PrimaryColorBg};
-	opacity: 0.5;
-`
+
 const InfoContainer = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -233,6 +232,10 @@ const InfoContainer = styled.div`
 	background-color: #000000;
 
 	padding: 20px;
+`
+
+const InfoTitle = styled.span`
+	text-transform: capitalize;
 `
 
 const Footer = styled.div`
@@ -247,10 +250,21 @@ const Footer = styled.div`
 const SlideIndex = styled.div`
 	display: flex;
 	font-size: ${FOOTER_TEXT_HEIGHT}vh;
+	align-items: center;
 `
-const Subscript = styled.div`
-	font-size: ${FOOTER_SUBTEXT_HEIGHT}vh;
-	padding: 0 8px;
+
+const InfoCircle = styled.div`
+	cursor: pointer;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	margin: 5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+
+	color: black;
+	background-color: white;
+	font-size: ${FOOTER_TEXT_HEIGHT - 2}vh;
+	font-weight: bold;
 `

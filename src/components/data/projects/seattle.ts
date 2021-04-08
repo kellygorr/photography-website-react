@@ -14,57 +14,71 @@ export const seattle: IProject = {
 			title: 'Seattle',
 			thumbnail: img1,
 			img: img1,
-			camera: 'Canon',
-			lens: 'Canon',
 			date: '1/1/11',
+			info:{
+				camera: 'Canon',
+				lens: 'Canon',
+			}
 		},
 		{
 			title: 'University of Washington',
 			thumbnail: img2,
 			img: img2,
-			camera: 'Canon',
-			lens: 'Canon',
 			date: '1/1/11',
+			info:{
+				camera: 'Canon',
+				lens: 'Canon',
+			}
 		},
 		{
 			title: 'Gas Works Park',
 			thumbnail: img8,
 			img: img8,
-			camera: 'Canon',
-			lens: 'Canon',
 			date: '1/1/11',
+			info:{
+				camera: 'Canon',
+				lens: 'Canon',
+			}
 		},
 		{
 			title: 'Gas Works Park',
 			thumbnail: img9,
 			img: img9,
-			camera: 'Canon',
-			lens: 'Canon',
 			date: '1/1/11',
+			info:{
+				camera: 'Canon',
+				lens: 'Canon',
+			}
 		},
 		{
 			title: 'Gas Works Park',
 			thumbnail: img10,
 			img: img10,
-			camera: 'Canon',
-			lens: 'Canon',
 			date: '1/1/11',
+			info:{
+				camera: 'Canon',
+				lens: 'Canon',
+			}
 		},
 		{
 			title: 'Ballard locks',
 			thumbnail: img11,
 			img: img11,
-			camera: 'Canon',
-			lens: 'Canon',
 			date: '1/1/11',
+			info:{
+				camera: 'Canon',
+				lens: 'Canon',
+			}
 		},
 		{
 			title: 'Ballard locks',
 			thumbnail: img12,
 			img: img12,
-			camera: 'Canon',
-			lens: 'Canon',
 			date: '1/1/11',
+			info:{
+				camera: 'Canon',
+				lens: 'Canon',
+			}
 		},
 	],
 }

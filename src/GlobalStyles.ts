@@ -5,6 +5,7 @@ export const AccentColor = '#181818'
 export const PrimaryAccentColor = '#FFFFFF'
 export const PrimaryColor = '#FFFFFF'
 export const PrimaryColorBg = '#131313'
+export const Overlay = 'rgba(19,19,19,0.5)'
 export const LoadingColor = '#212121'
 
 export const GlobalStyles = createGlobalStyle`
