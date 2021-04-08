@@ -52,7 +52,7 @@ const info: IFooterList[] = [
 			{
 				tags: [SkillType.TypeScript, SkillType.React, SkillType.HTML, SkillType.CSS],
 				title: 'https://github.com/kellygorr',
-				URL: 'https://github.com/kellygorr?tab=repositories',
+				URL: 'https://github.com/kellygorr/photography-website-react',
 			},
 		],
 	},
