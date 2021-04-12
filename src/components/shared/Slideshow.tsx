@@ -89,12 +89,13 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 								<InfoContainer>
 									<span>{slide.title}</span>
 									<span>{slide.date && 'Date: ' + slide.date}</span>
-									{Object.keys(slide.info).map((x, index) => (
-										<span key={index}>
-											<InfoTitle>{`${x}: `}</InfoTitle>
-											<span>{slide.info[x]}</span>
-										</span>
-									))}
+									{slide.info &&
+										Object.keys(slide.info).map((x, index) => (
+											<span key={index}>
+												<InfoTitle>{`${x}: `}</InfoTitle>
+												<span>{slide.info[x]}</span>
+											</span>
+										))}
 								</InfoContainer>
 							</Info>
 						)}
@@ -134,15 +135,13 @@ const handleSlideClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, activ
 
 const HEADER_HEIGHT = 7
 const HEADER_TEXT_HEIGHT = HEADER_HEIGHT - 2
-const HEADER_HEIGHT_OFFSET = HEADER_HEIGHT - 1
 const HEADER_CLOSE = HEADER_HEIGHT / 2
 
 const FOOTER_HEIGHT = 5
 const FOOTER_TEXT_HEIGHT = FOOTER_HEIGHT - 2
 
-const FOOTER_HEADER_HEIGHT = HEADER_HEIGHT + FOOTER_HEIGHT
-
 const Container = styled.div`
+	display: flex;
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
@@ -152,37 +151,31 @@ const Header = styled(Link)`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
-	height: ${HEADER_HEIGHT}vh;
+	padding: 5px 3%;
 	width: 100%;
 `
 const Title = styled.div`
-	flex: 1;
-	height: ${HEADER_TEXT_HEIGHT}vh;
-	line-height: ${HEADER_HEIGHT_OFFSET}vh;
-	font-size: ${HEADER_TEXT_HEIGHT}vh;
+	font-size: clamp(25px, ${HEADER_TEXT_HEIGHT}vh, 40px);
 	font-family: 'mohaveregular';
 
 	text-transform: uppercase;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	padding-left: 3%;
 `
 
 const CloseButton = styled.div`
-	padding: 10px 3% 10px 10px;
 	display: flex;
 	align-items: center;
-	font-size: ${HEADER_CLOSE}vh;
+	font-size: clamp(18px, ${HEADER_CLOSE}vh, 30px);
 `
 
 const Slides = styled.div`
-	height: calc(100vh - ${FOOTER_HEADER_HEIGHT}vh);
-	width: 100%;
 	display: flex;
 	align-items: center;
-	width: inherit;
+	flex: 1;
+
+	width: 100%;
 	/* Hide scrollbars  */
 	overflow: -moz-scrollbars-none;
 	-ms-overflow-style: none;
@@ -242,29 +235,28 @@ const Footer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: ${FOOTER_HEIGHT}vh;
-	padding: 0 3%;
+	padding: 5px 3%;
 	width: 100%;
 `
 
 const SlideIndex = styled.div`
+	cursor: pointer;
 	display: flex;
-	font-size: ${FOOTER_TEXT_HEIGHT}vh;
+	font-size: clamp(18px, ${FOOTER_TEXT_HEIGHT}vh, 30px);
 	align-items: center;
 `
 
 const InfoCircle = styled.div`
-	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin: 5px;
+	margin: 8px;
 	width: 20px;
 	height: 20px;
 	border-radius: 100%;
 
 	color: black;
 	background-color: white;
-	font-size: ${FOOTER_TEXT_HEIGHT - 2}vh;
+	font-size: 15px;
 	font-weight: bold;
 `

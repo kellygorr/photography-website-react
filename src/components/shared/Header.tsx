@@ -8,8 +8,7 @@ export const Header: React.FC = () => {
 		<Container>
 			{/* <BackgroundImage src={bg} /> */}
 			<Logo to="/">
-				<Subhead>Photography by</Subhead>
-				<HeaderTitle>Kelly Gorr</HeaderTitle>
+				<HeaderTitle>Photography</HeaderTitle>
 			</Logo>
 		</Container>
 	)
@@ -24,6 +23,7 @@ const Container = styled.div`
 	height: 100%;
 	min-height: 100px;
 	padding-bottom: 10px;
+	font-family: 'mohaveregular';
 `
 
 const Logo = styled(Link)`
@@ -33,18 +33,13 @@ const Logo = styled(Link)`
 	align-items: center;
 	line-height: 1.75em;
 `
-const Subhead = styled.div`
-	font-size: 1em;
-	font-family: 'mohaveregular';
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	color: #bfbfbf;
-`
 
 const HeaderTitle = styled.h1`
 	font-size: 2em;
 	font-family: 'mohaveregular';
 	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #bfbfbf;
 `
 
 // const BackgroundImage = styled.img`
