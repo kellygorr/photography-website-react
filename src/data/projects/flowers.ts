@@ -28,28 +28,28 @@ export const flowers: IProject = {
 		{
 			title: 'Bee',
 			img: img1,
-			date: '',
+			date: '7.23.2009',
 			info:{
-				camera: 'Canon',
-				lens: 'Canon',
+				camera: 'Canon EOS Digital Rebel',
+				lens: 'Canon EF 100mm f/2.8 Macro',
 			}
 		},
 		{
 			title: 'Dandelion',
 			img: img9,
-			date: '',
+			date: '7.23.2009',
 			info:{
-				camera: 'Canon',
-				lens: 'Canon',
+				camera: 'Canon EOS Digital Rebel',
+				lens: 'Canon EF 100mm f/2.8 Macro',
 			}
 		},
 		{
 			title: 'Dandelions',
 			img: img10,
-			date: '',
+			date: '7.23.2009',
 			info:{
-				camera: 'Canon',
-				lens: 'Canon',
+				camera: 'Canon EOS Digital Rebel',
+				lens: 'Canon EF 100mm f/2.8 Macro',
 			}
 		},
 		{
@@ -64,28 +64,28 @@ export const flowers: IProject = {
 		{
 			title: 'Butterfly',
 			img: img2,
-			date: '',
+			date: '8.16.2009',
 			info:{
-				camera: 'Canon',
-				lens: 'Canon',
+				camera: 'Canon EOS Digital Rebel',
+				lens: 'Canon EF 100mm f/2.8 Macro',
 			}
 		},
 		{
 			title: 'Butterfly',
 			img: img3,
-			date: '',
+			date: '8.16.2009',
 			info:{
-				camera: 'Canon',
-				lens: 'Canon',
+				camera: 'Canon EOS Digital Rebel',
+				lens: 'Canon EF 100mm f/2.8 Macro',
 			}
 		},
 		{
 			title: 'Butterfly',
 			img: img4,
-			date: '',
+			date: '8.16.2009',
 			info:{
-				camera: 'Canon',
-				lens: 'Canon',
+				camera: 'Canon EOS Digital Rebel',
+				lens: 'Canon EF 100mm f/2.8 Macro',
 			}
 		},
 		{
@@ -100,10 +100,10 @@ export const flowers: IProject = {
 		{
 			title: 'Coneflower',
 			img: img11,
-			date: '',
+			date: '7.23.2009',
 			info:{
-				camera: 'Canon',
-				lens: 'Canon',
+				camera: 'Canon EOS Digital Rebel',
+				lens: 'Canon EF 100mm f/2.8 Macro',
 			}
 		},
 		{
