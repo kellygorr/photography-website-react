@@ -37,7 +37,7 @@ export const Thumbnail = (props: IThumbnailProps) => {
 						${process.env.REACT_APP_THUMBNAIL_15x}${photo.img} 1.5x,
 						${process.env.REACT_APP_THUMBNAIL_2x}${photo.img} 2x,
 					`}
-							src={`${process.env.REACT_APP_THUMBNAIL_1x}${photo.img}`}
+							src={process.env.REACT_APP_THUMBNAIL_1x + photo.img}
 						/>
 						<Hover />
 					</>

@@ -40,7 +40,7 @@ const info: IFooterList[] = [
 	{
 		title: 'Website',
 		link: {
-			title: 'https://github.com/kellygorr/photography-website-react',
+			title: 'github.com/kellygorr/photography-website-react',
 			URL: 'https://github.com/kellygorr/photography-website-react',
 		},
 	},

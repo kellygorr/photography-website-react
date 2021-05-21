@@ -46,7 +46,7 @@ export const Slide = (props: ISlideProps) => {
 						${process.env.REACT_APP_IMAGE_1600px}${slide.img} 1600w,
 						${process.env.REACT_APP_IMAGE_1920px}${slide.img} 1920w,
 					`}
-					src={`${process.env.REACT_APP_IMAGE_1920px}${slide.img}`}
+					src={process.env.REACT_APP_IMAGE_1920px + slide.img}
 					alt={slide.title}
 				/>
 			)}

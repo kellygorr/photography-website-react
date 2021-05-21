@@ -56,8 +56,9 @@ const Title = styled.div`
 	}
 `
 const StyledLink = styled.a`
+	overflow: hidden;
 	white-space: nowrap;
-
+	text-overflow: ellipsis;
 	padding: 5px;
 	border: 2px solid transparent;
 
