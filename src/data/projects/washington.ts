@@ -33,6 +33,7 @@ export const washington: IProject = {
 			info:{
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'Canon EF 100-400mm f/4.5-5.6L IS USM',
+				extra: 'Photoshop fantasy edit'
 			}
 		},
 		{

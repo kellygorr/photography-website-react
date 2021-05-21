@@ -50,6 +50,7 @@ export const flowers: IProject = {
 			info:{
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'Canon EF 100mm f/2.8 Macro',
+				extra: 'Photoshop fantasy edit'
 			}
 		},
 		{
@@ -104,6 +105,7 @@ export const flowers: IProject = {
 			info:{
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'Canon EF 100mm f/2.8 Macro',
+				extra: 'Photoshop fantasy edit'
 			}
 		},
 		{
@@ -113,6 +115,7 @@ export const flowers: IProject = {
 			info:{
 				camera: 'Canon EOS 30D',
 				lens: 'EF70-200mm f/2.8L USM +2.0x',
+				extra: 'Photoshop fantasy edit'
 			}
 		},
 		{

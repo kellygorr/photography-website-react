@@ -13,6 +13,7 @@ export const europe: IProject = {
 			date: '6.20.2004',
 			info:{
 				camera: 'Canon PowerShot S1 iS',
+				extra: 'Photoshop fantasy edit'
 			}
 		},
 		{

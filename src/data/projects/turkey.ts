@@ -15,7 +15,6 @@ const img12 = 'turkey-12.jpg'
 const img13 = 'turkey-13.jpg'
 const img14 = 'turkey-14.jpg'
 const img16 = 'turkey-16.jpg'
-const img17 = 'turkey-17.jpg'
 const img19 = 'turkey-19.jpg'
 const img20 = 'turkey-20.jpg'
 const img21 = 'turkey-21.jpg'
@@ -172,15 +171,6 @@ export const turkey: IProject = {
 			title: 'Ephesus',
 			img: img16,
 			date: '9.23.2009',
-			info:{
-				camera: 'Canon EOS Digital Rebel',
-				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
-		},
-		{
-			title: 'Pamukkale',
-			img: img17,
-			date: '9.25.2009',
 			info:{
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',

@@ -10,5 +10,6 @@ export interface IPhotos {
 	info?: {
 		camera?: string
 		lens?: string
+		extra?: string
 	}
 }
