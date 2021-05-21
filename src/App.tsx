@@ -1,12 +1,18 @@
 import * as React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import styled from 'styled-components/macro'
-import { Home, Page } from './components'
-import { Header as HeaderContent, Footer as FooterContent } from './components/shared'
-import { projects } from './components/data'
-import { GlobalStyles, PrimaryColorBg, PrimaryColor } from './GlobalStyles'
+import { projects } from './data'
+import { Home } from './components/Home'
+import { Page } from './components/Page'
+import { Header as HeaderComponent } from './components/Header'
+import { Footer as FooterComponent } from './components/Footer'
+import { GlobalStyles, PrimaryColorBg, TextColor } from './GlobalStyles'
 
-const App: React.FC = () => {
+interface ILocation {
+	index: number
+}
+
+const App = () => {
 	const [isHomepage, setIsHomepage] = React.useState(true)
 	const [homeScrollPosition, setHomeScrollPosition] = React.useState(0)
 	const appContainerRef = React.useRef(null)
@@ -19,10 +25,10 @@ const App: React.FC = () => {
 
 	return (
 		<Router>
-			<AppContainer ref={appContainerRef}>
+			<AppContainer ref={appContainerRef} tabIndex={-1}>
 				<GlobalStyles />
 				<Header>
-					<Route exact path={['/', '/about']} render={() => <HeaderContent />} />
+					<Route exact path="/" render={() => <HeaderComponent />} />
 				</Header>
 				<Canvas>
 					<Route
@@ -44,13 +50,13 @@ const App: React.FC = () => {
 									setHomeScrollPosition(appContainerRef.current.scrollTop)
 								}
 								setIsHomepage(false)
-								return project && <Page data={project} index={location.state ? location.state.index : 0} />
+								return project && <Page data={project} index={location.state ? (location.state as ILocation).index : 0} />
 							}}
 						/>
 					</Switch>
 				</Canvas>
 				<Footer>
-					<Route exact path={['/', '/about']} render={() => <FooterContent />} />
+					<Route exact path="/" render={() => <FooterComponent />} />
 				</Footer>
 			</AppContainer>
 		</Router>
@@ -67,7 +73,7 @@ const AppContainer = styled.div`
 	display: grid;
 	grid-template-rows: [header] auto [canvas] 1fr [footer] auto;
 
-	color: ${PrimaryColor};
+	color: ${TextColor};
 	background-color: ${PrimaryColorBg};
 
 	overflow: hidden;
@@ -77,7 +83,7 @@ const Header = styled.header`
 	width: inherit;
 	grid-row: header;
 `
-const Canvas = styled.div`
+const Canvas = styled.main`
 	width: inherit;
 	grid-row: canvas;
 `

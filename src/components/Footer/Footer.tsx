@@ -1,64 +1,52 @@
 import * as React from 'react'
 import styled, { css } from 'styled-components/macro'
-import { PrimaryAccentColor } from '../../GlobalStyles'
-import { SkillType } from '../data/IProject'
 import { FooterList } from './FooterList'
 
 export interface IFooterList {
 	title: string
-	link: ILink[]
+	link: ILink
 }
 
 interface ILink {
 	title: string
 	URL: string
-	tags?: string[]
 }
 
 const sites: IFooterList[] = [
 	{
 		title: 'Contact/Resume',
-		link: [
-			{
-				title: 'LinkedIn',
-				URL: 'https://www.linkedin.com/in/kellygorr/',
-			},
-		],
+		link: {
+			title: 'LinkedIn',
+			URL: 'https://www.linkedin.com/in/kellygorr/',
+		},
 	},
 	{
 		title: 'Portfolio',
-		link: [
-			{
-				title: 'kellygorr.com',
-				URL: 'https://kellygorr.com/',
-			},
-		],
+		link: {
+			title: 'kellygorr.com',
+			URL: 'https://kellygorr.com/',
+		},
 	},
 	{
 		title: 'Photography',
-		link: [
-			{
-				title: 'photography.kellygorr.com',
-				URL: 'https://photography.kellygorr.com/',
-			},
-		],
+		link: {
+			title: 'photography.kellygorr.com',
+			URL: 'https://photography.kellygorr.com/',
+		},
 	},
 ]
 
 const info: IFooterList[] = [
 	{
-		title: 'About Website',
-		link: [
-			{
-				tags: [SkillType.TypeScript, SkillType.React, SkillType.HTML, SkillType.CSS],
-				title: 'https://github.com/kellygorr',
-				URL: 'https://github.com/kellygorr/photography-website-react',
-			},
-		],
+		title: 'Website',
+		link: {
+			title: 'https://github.com/kellygorr/photography-website-react',
+			URL: 'https://github.com/kellygorr/photography-website-react',
+		},
 	},
 ]
 
-export const Footer: React.FC = () => (
+export const Footer = () => (
 	<Container>
 		<Left>
 			<FooterList list={sites} />
@@ -76,7 +64,6 @@ const Container = styled.div`
 	height: 100%;
 	padding: 40px 3%;
 
-	color: ${PrimaryAccentColor};
 	font-size: 0.9em;
 	background-color: #000000;
 `

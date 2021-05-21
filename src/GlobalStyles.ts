@@ -8,6 +8,8 @@ export const PrimaryColorBg = '#131313'
 export const Overlay = 'rgba(19,19,19,0.5)'
 export const LoadingColor = '#212121'
 
+export const TextColor = ' #dedede'
+
 export const GlobalStyles = createGlobalStyle`
 	* {
         position: relative;
@@ -45,6 +47,10 @@ export const GlobalStyles = createGlobalStyle`
 		color: inherit;
 		text-decoration: inherit;
 		font-family: 'open_sansregular';
+	}
+
+	ul {
+		list-style-type:none;
 	}
 
 `

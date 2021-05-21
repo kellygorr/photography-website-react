@@ -4,11 +4,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-## .env file setup
-
-The base url for images and fonts needs to be added to the .env file (create file and add the lines below)
-REACT_APP_IMAGE_URL=http://www.kellygorr.com/sites/photography/media/images/
-
 ### `yarn start`
 
 Runs the app in the development mode.<br />
@@ -47,4 +42,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
 # gallery-website-react
+
+## .env file setup
+
+The base url for images and fonts needs to be added to the .env file (create file and add the lines below)
+REACT_APP_IMAGE_URL=http://www.kellygorr.com/sites/photography/media/images/

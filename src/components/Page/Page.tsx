@@ -1,21 +1,21 @@
 import * as React from 'react'
 import styled from 'styled-components/macro'
 import { createRef } from 'react'
-import { IProject } from './data/IProject'
-import { Slideshow } from './shared/Slideshow'
+import { IProject } from '../../data/IProject'
+import { Slideshow } from './Slideshow'
 
 interface IPageProps {
 	index: number
 	data: IProject | null
 }
 
-export const Page: React.FC<IPageProps> = (props: IPageProps) => {
+export const Page = (props: IPageProps) => {
 	if (!props.data) {
 		return null
 	}
 	return (
 		<Container>
-			<Slideshow index={props.index} title={props.data.title} data={props.data.photos} slideshowRef={createRef<HTMLDivElement>()} />
+			<Slideshow index={props.index} title={props.data.title} data={props.data.photos} slideshowRef={createRef<HTMLUListElement>()} />
 		</Container>
 	)
 }
