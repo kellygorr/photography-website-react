@@ -13,7 +13,7 @@ export const Home = (props: IHomeProps) => {
 				return (
 					<Row key={project.title}>
 						<Title>
-							{project.title} {project.photos.length}
+							{project.title} - {project.photos.length}
 						</Title>
 						<Thumbnails title={project.title} photos={project.photos} />
 					</Row>

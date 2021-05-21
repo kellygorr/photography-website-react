@@ -47,7 +47,6 @@ export const Thumbnail = (props: IThumbnailProps) => {
 	)
 }
 
-const THUMBNAIL_WIDTH = 350
 const BORDER_WIDTH = 2
 
 export const AnimateIn = keyframes`
@@ -72,12 +71,10 @@ const StyledLink = styled(Link)`
 	justify-content: center;
 	overflow: hidden;
 	z-index: 1;
-
 	height: 250px;
-	width: ${THUMBNAIL_WIDTH}px;
-	min-width: ${THUMBNAIL_WIDTH + BORDER_WIDTH * 2}px;
-
+	width: 350px;
 	background-color: ${LoadingColor};
+	transition: width 0.5s ease-in, height 0.5s ease-in;
 
 	&:focus {
 		${Hover} {
@@ -91,6 +88,11 @@ const StyledLink = styled(Link)`
 		${Hover} {
 			opacity: 0;
 		}
+	}
+
+	@media only screen and (max-width: 450px) {
+		height: 200px;
+		width: 275px;
 	}
 `
 
