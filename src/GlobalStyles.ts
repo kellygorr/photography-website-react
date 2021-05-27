@@ -41,6 +41,8 @@ export const GlobalStyles = createGlobalStyle`
 	button {
 		border-radius: 0;
 		border-width: 0;
+		background: transparent;
+		color: inherit;
 	}
 
 	a {

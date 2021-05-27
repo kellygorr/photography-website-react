@@ -55,7 +55,7 @@ export const Slideshow = (props: IPageProps) => {
 
 		if (e.key === 'Escape') {
 			history.push('/')
-		} else if (e.key === 'Enter') {
+		} else if (e.key === 'Enter' && (e.target as HTMLElement).className.includes('slide')) {
 			handleIndexClick()
 		}
 	}
@@ -104,7 +104,7 @@ export const Slideshow = (props: IPageProps) => {
 			</Slides>
 
 			<Footer>
-				<SlideIndex onClick={handleIndexClick} id="slide-info" tabIndex={0} aria-label={'slide info'}>
+				<SlideIndex id="slide-info" onClick={handleIndexClick} tabIndex={0} aria-expanded={infoVisible} aria-label={'slide info'}>
 					{active + 1}
 					<InfoCircle>i</InfoCircle>
 					{props.data.length}
@@ -222,11 +222,13 @@ const Footer = styled.div`
 	min-height: 40px;
 `
 
-const SlideIndex = styled.div`
+const SlideIndex = styled.button`
 	cursor: pointer;
 	display: flex;
 	font-size: clamp(18px, ${FOOTER_TEXT_HEIGHT}vh, 30px);
 	align-items: center;
+	border: ${BORDER_WIDTH}px solid transparent;
+	padding: 5px;
 
 	&:focus {
 		border: ${BORDER_WIDTH}px solid ${PrimaryColor};

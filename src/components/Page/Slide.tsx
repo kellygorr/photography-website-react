@@ -35,7 +35,7 @@ export const Slide = (props: ISlideProps) => {
 	}, [inView, loading, slide.img])
 
 	return (
-		<Container className="slide" ref={ref} aria-label={slide.title} tabIndex={0}>
+		<Container className="slide" ref={ref} role={'button'} aria-expanded={infoVisible} aria-label={slide.title} tabIndex={0}>
 			{!loading && (
 				<Img
 					srcSet={`
