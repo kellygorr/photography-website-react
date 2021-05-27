@@ -1,6 +1,5 @@
 import * as React from 'react'
-import styled, { css } from 'styled-components/macro'
-import { FooterList } from './FooterList'
+import styled from 'styled-components/macro'
 
 export interface IFooterList {
 	title: string
@@ -12,7 +11,7 @@ interface ILink {
 	URL: string
 }
 
-const sites: IFooterList[] = [
+const list: IFooterList[] = [
 	{
 		title: 'Contact/Resume',
 		link: {
@@ -34,9 +33,6 @@ const sites: IFooterList[] = [
 			URL: 'https://photography.kellygorr.com/',
 		},
 	},
-]
-
-const info: IFooterList[] = [
 	{
 		title: 'Website',
 		link: {
@@ -48,34 +44,65 @@ const info: IFooterList[] = [
 
 export const Footer = () => (
 	<Container>
-		<Left>
-			<FooterList list={sites} />
-		</Left>
-		<Right>
-			<FooterList list={info} />
-		</Right>
+		<List>
+			{list.map((item: IFooterList) => (
+				<ListItem key={item.title}>
+					<StyledLink href={item.link.URL} rel="noopener noreferrer" target="_blank">
+						<Title>{item.title}</Title>
+						{item.link.title}
+					</StyledLink>
+				</ListItem>
+			))}
+		</List>
 	</Container>
 )
 
 const Container = styled.div`
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	display: flex;
 	width: 100%;
-	height: 100%;
+	height: 270px;
 	padding: 40px 3%;
 
 	font-size: 0.9em;
 	background-color: #000000;
+
+	@media only screen and (max-width: 768px) {
+		height: auto;
+	}
 `
 
-const Columns = css`
+const List = styled.ul`
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 100%;
+	width: 100%;
+`
+
+const ListItem = styled.li`
 	display: flex;
 	flex-direction: column;
+	margin-top: 10px;
+	min-width: 50%;
 `
+const Title = styled.div`
+	&:first-child {
+		margin: 0;
+	}
+`
+const StyledLink = styled.a`
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 5px;
+	border: 2px solid transparent;
 
-const Left = styled.div`
-	${Columns}
-`
-const Right = styled.div`
-	${Columns}
+	&:focus {
+		border: 2px solid white;
+	}
+
+	&:focus:not(:focus-visible) {
+		border: 2px solid transparent;
+	}
 `
