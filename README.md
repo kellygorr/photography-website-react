@@ -1,30 +1,28 @@
 ## Setup
 
--   Visual Studio Code (recommended)
--   Node
--   Yarn (recommended)
+-   [Visual Studio Code](https://code.visualstudio.com) (recommended)
+-   [Node](https://nodejs.org/en/)
+-   [Yarn](https://yarnpkg.com/lang/en/) (recommended)
 
-**1. Clone the repo**
+**Clone the repo**
 
 ```
 $ git clone git@github.com:kellygorr/photography-website-react.git
 ```
 
-**2. Install dependencies**
+**Install dependencies**
 
 ```
 $ yarn
 ```
 
-**2. Run app**
+**Run app**
 
 ```
 $ yarn start
 ```
 
-## photography-website-react
-
-### .env
+### .env file
 
 This file must be created manually. All images use `process.env` to pull in the base image path.
 REACT_APP_EXAMPLE=http://www.example.com/images/
@@ -81,4 +79,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 Learn about [TypeScript](https://www.typescriptlang.org/).
+
 To learn React, check out the [React documentation](https://reactjs.org/).
