@@ -33,7 +33,7 @@ export const slideshowAccessibility = (props: ISlideshowAccessibility) => {
             if(document.activeElement.classList.contains('slide')){
                 element = e.shiftKey ? document.getElementById('slide-title'): document.getElementById('slide-info')
              
-            } else if(document.activeElement.id === 'slide-info' && e.shiftKey || document.activeElement.id === 'slide-title' ){
+            } else if((document.activeElement.id === 'slide-info' && e.shiftKey) || document.activeElement.id === 'slide-title' ){
                 element = document.getElementsByClassName('slide')[activeIndex]
             }
 
