@@ -1,4 +1,3 @@
-import * as React from 'react'
 import styled, { keyframes } from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
@@ -11,7 +10,7 @@ interface IThumbnailProps {
 	photo: IPhotos
 }
 
-export const Thumbnail = (props: IThumbnailProps) => {
+export const Thumbnail = (props: IThumbnailProps): JSX.Element => {
 	const { photo, title, index } = props
 	const [ref, inView] = useInView({
 		threshold: 0.1,

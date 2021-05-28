@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
@@ -13,7 +12,7 @@ interface ISlideProps {
 	setInfoVisible: (isVisible: boolean) => void
 }
 
-export const Slide = (props: ISlideProps) => {
+export const Slide = (props: ISlideProps): JSX.Element => {
 	const { slide, infoVisible, setInfoVisible } = props
 	const [loading, setLoading] = useState(true)
 
@@ -25,7 +24,7 @@ export const Slide = (props: ISlideProps) => {
 	useEffect(() => {
 		if (inView && loading) {
 			// start loading original image
-			const imageToLoad = new (Image as any)()
+			const imageToLoad = new Image()
 			imageToLoad.src = getImageSrc(slide.img)
 			imageToLoad.onload = () => {
 				// When image is loaded replace the src and set loading to false

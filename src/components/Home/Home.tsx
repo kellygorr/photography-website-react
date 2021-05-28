@@ -1,4 +1,3 @@
-import * as React from 'react'
 import styled from 'styled-components/macro'
 import { projects } from '../../data'
 import { Thumbnails } from './Thumbnails'
@@ -6,7 +5,7 @@ import { Thumbnails } from './Thumbnails'
 interface IHomeProps {
 	isVisible: boolean
 }
-export const Home = (props: IHomeProps) => {
+export const Home = (props: IHomeProps): JSX.Element => {
 	return (
 		<Gallery style={{ display: props.isVisible ? 'grid' : 'none' }}>
 			{projects.map((project) => {

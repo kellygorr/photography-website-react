@@ -1,9 +1,8 @@
-import * as React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { PrimaryColor, PrimaryColorBg } from '../../GlobalStyles'
 
-export const Header = () => {
+export const Header = (): JSX.Element => {
 	return (
 		<HeaderTitle>
 			<StyledLink aria-label="logo" to="/">

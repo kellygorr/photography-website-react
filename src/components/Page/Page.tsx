@@ -1,4 +1,3 @@
-import * as React from 'react'
 import styled from 'styled-components/macro'
 import { createRef } from 'react'
 import { IProject } from '../../data/IProject'
@@ -9,7 +8,7 @@ interface IPageProps {
 	data: IProject | null
 }
 
-export const Page = (props: IPageProps) => {
+export const Page = (props: IPageProps): JSX.Element => {
 	if (!props.data) {
 		return null
 	}

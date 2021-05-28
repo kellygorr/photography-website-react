@@ -18,7 +18,7 @@ let slideshowRef: React.RefObject<HTMLUListElement>
 let ScrollTimer: number
 let InfoTimer: number
 
-export const Slideshow = (props: IPageProps) => {
+export const Slideshow = (props: IPageProps): JSX.Element => {
 	const history = useHistory()
 	slideshowRef = props.slideshowRef
 	const [active, setActive] = useState(props.index)
@@ -77,7 +77,7 @@ export const Slideshow = (props: IPageProps) => {
 					clearTimeout(InfoTimer)
 
 					setIsScrolling(true)
-					ScrollTimer = setTimeout(function() {
+					ScrollTimer = setTimeout(() => {
 						setIsScrolling(false)
 					}, 250)
 				}}
@@ -85,7 +85,7 @@ export const Slideshow = (props: IPageProps) => {
 					clearTimeout(InfoTimer)
 
 					if (!infoVisible && !isScrolling) {
-						InfoTimer = setTimeout(function() {
+						InfoTimer = setTimeout(() => {
 							setInfoVisible(true)
 						}, 250)
 					}
@@ -116,7 +116,7 @@ export const Slideshow = (props: IPageProps) => {
 
 const findActiveSlide = (setActive: (index: number) => void): void => {
 	if (slideshowRef && slideshowRef.current) {
-		var slideArray = [].slice.call(slideshowRef.current.querySelectorAll('li'))
+		const slideArray = [].slice.call(slideshowRef.current.querySelectorAll('li'))
 		const activeSlideIndex = slideArray.findIndex((el) => isElementCentered(el))
 
 		if (activeSlideIndex >= 0) {
@@ -126,7 +126,7 @@ const findActiveSlide = (setActive: (index: number) => void): void => {
 }
 
 const isElementCentered = (el: HTMLUListElement) => {
-	var rect = el.getBoundingClientRect()
+	const rect = el.getBoundingClientRect()
 	const center = document.documentElement.clientWidth / 2
 	return rect.left < center && center < rect.right
 }

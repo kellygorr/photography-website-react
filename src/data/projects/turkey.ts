@@ -28,7 +28,6 @@ const img28 = 'turkey-28.jpg'
 const img29 = 'turkey-29.jpg'
 const img32 = 'turkey-32.jpg'
 
-
 export const turkey: IProject = {
 	title: 'Turkey',
 	photos: [
@@ -36,244 +35,244 @@ export const turkey: IProject = {
 			title: 'Istanbul',
 			img: img29,
 			date: '9.19.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Blue Mosque',
 			img: img1,
 			date: '9.19.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img2,
 			date: '9.19.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img3,
 			date: '9.26.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img4,
 			date: '9.26.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img5,
 			date: '9.30.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img6,
 			date: '9.26.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img7,
 			date: '9.24.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Mt. Olympos',
 			img: img8,
 			date: '9.27.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img9,
 			date: '9.29.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Istanbul',
 			img: img10,
 			date: '9.19.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img11,
 			date: '9.26.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Blue Mosque',
 			img: img12,
 			date: '9.19.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Blue Mosque',
 			img: img13,
 			date: '9.19.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Istanbul',
 			img: img14,
 			date: '9.20.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Ephesus',
 			img: img16,
 			date: '9.23.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Cappadocia',
 			img: img19,
 			date: '9.26.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img20,
 			date: '9.26.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img21,
 			date: '9.29.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Blue Mosque',
 			img: img22,
 			date: '9.19.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img23,
 			date: '9.21.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img24,
 			date: '9.21.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img25,
 			date: '9.23.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img26,
 			date: '9.26.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img27,
 			date: '9.26.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Turkey',
 			img: img28,
 			date: '9.26.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Cappadocia',
 			img: img32,
 			date: '9.29.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'EF-S 18-55mm f/3.5-5.6 IS',
-			}
-		}
+			},
+		},
 	],
 }

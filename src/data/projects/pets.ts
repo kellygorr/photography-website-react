@@ -16,73 +16,73 @@ export const pets: IProject = {
 			title: 'Kody',
 			img: img4,
 			date: '',
-			info:{
+			info: {
 				camera: 'Canon EOS 60D',
 				lens: 'Rokinon FE8M-C 8mm F3.5 Fisheye Fixed Lens',
-			}
+			},
 		},
 		{
 			title: 'Basil',
 			img: img5,
 			date: '5.29.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'Canon EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Basil',
 			img: img6,
 			date: '7.3.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'Canon EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Comet',
 			img: img9,
 			date: '1.26.2008',
-			info:{
+			info: {
 				camera: 'Canon EOS 30D',
 				lens: 'Canon EF-S 17-85mm f/4-5.6 IS USM',
-			}
+			},
 		},
 		{
 			title: 'Rocky',
 			img: img1,
 			date: '4.25.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'Canon EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Cory',
 			img: img2,
 			date: '5.10.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'Canon EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Basil',
 			img: img8,
 			date: '7.3.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'Canon EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 		{
 			title: 'Cory',
 			img: img3,
 			date: '5.10.2009',
-			info:{
+			info: {
 				camera: 'Canon EOS Digital Rebel',
 				lens: 'Canon EF-S 18-55mm f/3.5-5.6 IS',
-			}
+			},
 		},
 	],
 }

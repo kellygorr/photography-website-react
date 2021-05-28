@@ -1,4 +1,3 @@
-import * as React from 'react'
 import styled from 'styled-components/macro'
 
 export interface IFooterList {
@@ -42,7 +41,7 @@ const list: IFooterList[] = [
 	},
 ]
 
-export const Footer = () => (
+export const Footer = (): JSX.Element => (
 	<Container>
 		<List>
 			{list.map((item: IFooterList) => (

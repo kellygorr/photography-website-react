@@ -11,26 +11,26 @@ export const europe: IProject = {
 			title: 'Toledo',
 			img: img3,
 			date: '6.20.2004',
-			info:{
+			info: {
 				camera: 'Canon PowerShot S1 iS',
-				extra: 'Photoshop fantasy edit'
-			}
+				extra: 'Photoshop fantasy edit',
+			},
 		},
 		{
 			title: 'Sinagoga La Blanca',
 			img: img2,
 			date: '6.20.2004',
-			info:{
+			info: {
 				camera: 'Canon PowerShot S1 iS',
-			}
+			},
 		},
 		{
 			title: 'Paris',
 			img: img4,
 			date: '6.27.2004',
-			info:{
+			info: {
 				camera: 'Canon PowerShot S1 iS',
-			}
+			},
 		},
 	],
 }

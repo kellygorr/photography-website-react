@@ -12,7 +12,7 @@ interface ILocation {
 	index: number
 }
 
-const App = () => {
+const App = (): JSX.Element => {
 	const [isHomepage, setIsHomepage] = React.useState(true)
 	const [homeScrollPosition, setHomeScrollPosition] = React.useState(0)
 	const appContainerRef = React.useRef(null)

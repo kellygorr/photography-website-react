@@ -9,7 +9,7 @@ interface IThumbnailProps {
 	photos: IPhotos[]
 }
 
-export const Thumbnails = (props: IThumbnailProps) => {
+export const Thumbnails = (props: IThumbnailProps): JSX.Element => {
 	const ref = React.useRef<HTMLUListElement>(null)
 	const [tabIndex, setTabIndex] = React.useState(0) // Start with index 0 instead of navigating the dom to determine the index of the active element on every tab
 
