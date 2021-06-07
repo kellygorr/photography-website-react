@@ -100,6 +100,6 @@ const Image = styled.img`
 	min-width: 100%;
 	min-height: 100%;
 	opacity: 0;
-	animation: 0.75s ease-out ${AnimateIn};
+	animation: 1s ease-out 0.5ms ${AnimateIn};
 	animation-fill-mode: forwards;
 `

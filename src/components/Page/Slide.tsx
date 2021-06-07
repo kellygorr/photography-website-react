@@ -14,28 +14,15 @@ interface ISlideProps {
 
 export const Slide = (props: ISlideProps): JSX.Element => {
 	const { slide, infoVisible, setInfoVisible } = props
-	const [loading, setLoading] = useState(true)
 
 	const [ref, inView] = useInView({
 		threshold: 0.1,
 		triggerOnce: true,
 	})
 
-	useEffect(() => {
-		if (inView && loading) {
-			// start loading original image
-			const imageToLoad = new Image()
-			imageToLoad.src = getImageSrc(slide.img)
-			imageToLoad.onload = () => {
-				// When image is loaded replace the src and set loading to false
-				setLoading(false)
-			}
-		}
-	}, [inView, loading, slide.img])
-
 	return (
 		<Container className="slide" ref={ref} role={'button'} aria-expanded={infoVisible} aria-label={slide.title} tabIndex={0}>
-			{!loading && (
+			{inView && (
 				<Img
 					srcSet={`
 						${process.env.REACT_APP_IMAGE_640px}${slide.img} 640w,
@@ -71,24 +58,6 @@ export const Slide = (props: ISlideProps): JSX.Element => {
 			)}
 		</Container>
 	)
-}
-
-const getImageSrc = (img: string): string => {
-	const width = document.body.clientWidth
-
-	if (width < 640) {
-		return process.env.REACT_APP_IMAGE_640px + img
-	} else if (width < 768) {
-		return process.env.REACT_APP_IMAGE_768px + img
-	} else if (width < 1024) {
-		return process.env.REACT_APP_IMAGE_1024px + img
-	} else if (width < 1366) {
-		return process.env.REACT_APP_IMAGE_1366px + img
-	} else if (width < 1600) {
-		return process.env.REACT_APP_IMAGE_1600px + img
-	}
-
-	return process.env.REACT_APP_IMAGE_1920px + img
 }
 
 const BORDER_WIDTH = 2
@@ -147,6 +116,6 @@ const InfoTitle = styled.span`
 
 const Img = styled.img`
 	opacity: 0;
-	animation: 0.75s ease-out 0.2s ${AnimateIn};
+	animation: 1s ease-out 0.5s ${AnimateIn};
 	animation-fill-mode: forwards;
 `
