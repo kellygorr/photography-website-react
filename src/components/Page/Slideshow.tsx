@@ -77,7 +77,7 @@ export const Slideshow = (props: IPageProps): JSX.Element => {
 					clearTimeout(InfoTimer)
 
 					setIsScrolling(true)
-					ScrollTimer = setTimeout(() => {
+					ScrollTimer = window.setTimeout(() => {
 						setIsScrolling(false)
 					}, 250)
 				}}
@@ -85,7 +85,7 @@ export const Slideshow = (props: IPageProps): JSX.Element => {
 					clearTimeout(InfoTimer)
 
 					if (!infoVisible && !isScrolling) {
-						InfoTimer = setTimeout(() => {
+						InfoTimer = window.setTimeout(() => {
 							setInfoVisible(true)
 						}, 250)
 					}
