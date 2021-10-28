@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+import { PrimaryColor } from '../../GlobalStyles'
 
 export interface IFooterList {
 	title: string
@@ -7,7 +8,7 @@ export interface IFooterList {
 
 interface ILink {
 	title: string
-	URL: string
+	link: string
 }
 
 const list: IFooterList[] = [
@@ -15,28 +16,21 @@ const list: IFooterList[] = [
 		title: 'Contact/Resume',
 		link: {
 			title: 'LinkedIn',
-			URL: 'https://www.linkedin.com/in/kellygorr/',
+			link: 'https://www.linkedin.com/in/kellygorr/',
 		},
 	},
 	{
 		title: 'Portfolio',
 		link: {
 			title: 'kellygorr.com',
-			URL: 'https://kellygorr.com/',
-		},
-	},
-	{
-		title: 'Photography',
-		link: {
-			title: 'photography.kellygorr.com',
-			URL: 'https://photography.kellygorr.com/',
+			link: 'https://kellygorr.com/',
 		},
 	},
 	{
 		title: 'Website',
 		link: {
 			title: 'github.com/kellygorr/photography-website-react',
-			URL: 'https://github.com/kellygorr/photography-website-react',
+			link: 'https://github.com/kellygorr/photography-website-react',
 		},
 	},
 ]
@@ -46,9 +40,9 @@ export const Footer = (): JSX.Element => (
 		<List>
 			{list.map((item: IFooterList) => (
 				<ListItem key={item.title}>
-					<StyledLink href={item.link.URL} rel="noopener noreferrer" target="_blank">
-						<Title>{item.title}</Title>
-						{item.link.title}
+					<StyledLink href={(item.link as ILink).link} rel="noopener noreferrer" target="_blank">
+						<Header>{item.title}</Header>
+						<URL>{(item.link as ILink).title}</URL>
 					</StyledLink>
 				</ListItem>
 			))}
@@ -59,49 +53,42 @@ export const Footer = (): JSX.Element => (
 const Container = styled.div`
 	display: flex;
 	width: 100%;
-	height: 270px;
-	padding: 40px 3%;
+	padding: 40px 3% 25px 3%;
 
 	font-size: 0.9em;
 	background-color: #000000;
-
-	@media only screen and (max-width: 768px) {
-		height: auto;
-	}
 `
 
 const List = styled.ul`
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	justify-content: flex-end;
-	height: 100%;
-	width: 100%;
+	transition: padding 0.5s ease-out;
 `
 
 const ListItem = styled.li`
 	display: flex;
-	flex-direction: column;
-	margin-top: 10px;
-	min-width: 50%;
+	margin-bottom: 15px;
 `
-const Title = styled.div`
-	&:first-child {
-		margin: 0;
-	}
-`
+
+const Header = styled.div``
+const URL = styled.span``
+
 const StyledLink = styled.a`
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	padding: 5px;
-	border: 2px solid transparent;
-
-	&:focus {
-		border: 2px solid white;
+	&:before {
+		content: ' ';
+		position: absolute;
+		pointer-events: none;
+		top: 0px;
+		left: -15px;
+		bottom: 0px;
+		transition: border-color 100ms ease-in, left 100ms ease-in;
+		border-left: 2px solid transparent;
 	}
 
-	&:focus:not(:focus-visible) {
-		border: 2px solid transparent;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		&:before {
+			left: -8px;
+			border-color: ${PrimaryColor};
+		}
 	}
 `
